@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import HalfSideBlock from './HalfSideBlock';
 
 class MainScreen extends Component {
   render() {
-    return <section></section>;
+    return (
+      <section>
+        <HalfSideBlock />
+        <HalfSideBlock />
+      </section>
+    );
   }
 }
 
