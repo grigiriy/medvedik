@@ -12,7 +12,7 @@
 /build
 
 #images and other private content
-/assets/images
+/src/assets/images
 
 # misc
 .DS_Store
