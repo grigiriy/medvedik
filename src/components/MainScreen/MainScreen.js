@@ -7,8 +7,8 @@ class MainScreen extends Component {
   render() {
     return (
       <section className="mainBlock">
-        <HalfSideBlock />
-        <HalfSideBlock />
+        <HalfSideBlock side={'left'} />
+        <HalfSideBlock side={'right'} />
       </section>
     );
   }

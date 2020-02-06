@@ -1,0 +1,25 @@
+.mainBlock {
+  display: flex;
+  background: #000;
+  .halfScreenBlock {
+    color: #333;
+    width: 50vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    background-size: cover;
+    &.left {
+      p.h3 {
+        margin-left: auto;
+        color: #fff;
+      }
+    }
+    p.h3 {
+      align-self: flex-end;
+      padding: 0;
+      margin: 0;
+      font-size: 40px;
+      font-weight: 700;
+      padding: 0 5px 10px;
+    }
+  }
+}
