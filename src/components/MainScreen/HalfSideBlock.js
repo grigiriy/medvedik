@@ -26,7 +26,6 @@ class HalfSideBlock extends Component {
       <div
         className={'halfScreenBlock ' + content.position}
         style={{ backgroundImage: `url(${content.image})` }}
-        onClick={content.linkTo}
       >
         <p className="h3">{content.text}</p>
       </div>
