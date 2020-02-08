@@ -1,0 +1,19 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/ImpactRegular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ImpactRegular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/ImpactRegular.otf') format('opentype'),
+    /* Open Type Font */ url('../fonts/ImpactRegular.svg') format('svg'),
+    /* Legacy iOS */ url('../fonts/ImpactRegular.woff') format('woff'),
+    /* Modern Browsers */ url('../fonts/ImpactRegular.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'Impact';
+}
+
+.d-flex {
+  display: flex;
+}
