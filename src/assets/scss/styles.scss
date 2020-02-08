@@ -10,10 +10,28 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap&subset=cyrillic');
+
 * {
   font-family: 'Impact';
 }
 
 .d-flex {
   display: flex;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  &-fluid {
+    max-width: none;
+    margin: auto;
+    padding: 0 20px;
+  }
 }

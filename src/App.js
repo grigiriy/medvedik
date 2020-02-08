@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <MainScreen />
-      <div className="d-flex">
+      <div className="container-fluid d-flex">
         <PromoCard
           center={false}
           image={'left'}
@@ -40,10 +40,10 @@ function App() {
           content={'наборы к 14 февраля'}
         />
       </div>
-      <div>
+      <div class="container">
         <CatalogMenu />
       </div>
-      <div>
+      <div class="container">
         <ProductCard />
         <ProductCard />
         <ProductCard />

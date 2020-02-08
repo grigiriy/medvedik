@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 
+import './styles.scss';
+
 class ProductCard extends Component {
   render() {
     return (
-      <div>
-        <ul>
-          <li>Категория 1</li>
-          <li>Категория 2</li>
-          <li>Категория 3</li>
-          <li>Категория 4</li>
-        </ul>
-      </div>
+      <ul className="catalog-menu">
+        <li>Футболки</li>
+        <li>Толстовки</li>
+        <li>Рубашки</li>
+        <li>Интерьер</li>
+        <li>Свой дизайн</li>
+      </ul>
     );
   }
 }
