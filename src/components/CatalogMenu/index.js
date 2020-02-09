@@ -1,3 +1,3 @@
-import CatalogMenu from './CatalogMenu';
+import CatalogMenu from './CatalogMenu.jsx';
 
 export default CatalogMenu;

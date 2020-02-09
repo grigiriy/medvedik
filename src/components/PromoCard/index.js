@@ -1,3 +1,3 @@
-import PromoCard from './PromoCard';
+import PromoCard from './PromoCard.jsx';
 
 export default PromoCard;
