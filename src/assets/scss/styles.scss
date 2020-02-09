@@ -15,6 +15,7 @@
 
 * {
   font-family: 'Impact';
+  font-size: 18px;
 }
 
 .d-flex {
@@ -29,9 +30,12 @@ ul {
   margin: auto;
   padding: 0 20px;
   max-width: 1200px;
-  &-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  &.fluid {
     max-width: none;
-    margin: auto;
-    padding: 0 20px;
   }
+}
+.no-wrap {
+  flex-wrap: nowrap;
 }

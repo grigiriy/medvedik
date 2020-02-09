@@ -1,0 +1,17 @@
+.card {
+  max-width: calc(33.33% - 40px);
+  padding: 20px;
+
+  .card_attributes {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-family: 'Nunito', sans-serif;
+    }
+  }
+  .card_image {
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <MainScreen />
-      <div className="container-fluid d-flex">
+      <div className="container fluid d-flex no-wrap">
         <PromoCard
           center={false}
           image={'left'}
