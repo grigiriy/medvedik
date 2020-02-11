@@ -2,25 +2,22 @@ import React, { Component } from 'react';
 
 import './styles.scss';
 
+import Content from '../../assets/db/navMenu.js';
+
 class MainScreen extends Component {
   render() {
     return (
       <header>
         <ul className="topMenu">
-          {/* {this.state.items.map((item, index) => (
-            <Item
-              menu={this.state.menu}
-              item={item}
-              key={this.state.menu + index}
-            />
-          ))} */}
-          <li>Футболки</li>
-          <li>Толстовки</li>
-          <li>Картины</li>
-          <li>Книги</li>
-          <hr />
-          <li>Обо мне</li>
-          <li>Контакты</li>
+          {Content.items.map((item, index) => (
+            <li>
+              {item.link === null ? (
+                <hr />
+              ) : (
+                <a href={item.link}>{item.name}</a>
+              )}
+            </li>
+          ))}
         </ul>
         <h1 className="headerBack">Masha Medvedik</h1>
       </header>

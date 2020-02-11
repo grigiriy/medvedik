@@ -28,6 +28,13 @@ header {
     }
     & > li {
       width: auto;
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          color: #363636;
+        }
+      }
     }
   }
 }
