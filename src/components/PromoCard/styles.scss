@@ -1,10 +1,10 @@
 .col {
-  margin: 20px 10px;
+  margin: 20px auto;
   background-size: cover;
   &.side {
     display: flex;
     text-align: right;
-    width: 33%;
+    width: calc(25% - 50px);
     padding: 20px;
     div {
       margin-left: auto;
@@ -13,16 +13,45 @@
         font-size: 42px;
         color: #363636;
         margin: 0;
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+        @media (max-width: 455px) {
+          font-size: 22px;
+        }
       }
       .h4 {
         margin: 0;
         font-size: 30px;
         color: #fff2fc;
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
+        @media (max-width: 455px) {
+          font-size: 18px;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      width: calc(50% - 60px);
+      min-height: 300px;
+    }
+    @media (max-width: 455px) {
+      padding: 10px;
+      margin: 10px;
+      width: calc(50% - 25px);
+      &:first-child {
+        margin-right: auto;
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-left: auto;
+        margin-right: 0;
       }
     }
   }
   &.center {
-    width: 66%;
+    width: calc(50% - 50px);
     background: rgb(255, 199, 237);
     background: linear-gradient(
       90deg,
@@ -46,6 +75,18 @@
       div {
         margin-left: 0;
       }
+    }
+    @media (max-width: 1024px) {
+      margin-top: 0;
+      order: 2;
+      width: calc(100% - 20px);
+      img {
+        max-width: 100px;
+      }
+    }
+    @media (max-width: 455px) {
+      width: 100%;
+      margin: 0;
     }
   }
 }

@@ -13,6 +13,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap&subset=cyrillic');
 
+html,
+body,
+.App {
+  overflow-x: hidden;
+}
+
 * {
   font-family: 'Impact';
   font-size: 18px;
@@ -32,8 +38,15 @@ ul {
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   &.fluid {
     max-width: none;
+  }
+  &.clearfix {
+    padding: 0;
+  }
+  @media (max-width: 455px) {
+    padding: 0 10px;
   }
 }
 .no-wrap {

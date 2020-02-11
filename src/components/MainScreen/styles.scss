@@ -5,9 +5,9 @@
     color: #333;
     width: 50vw;
     height: calc(100vh - 7vw);
-    min-height: 700px;
     display: flex;
     background-size: cover;
+    background-position: center;
     &.left {
       p.h3 {
         margin-left: auto;
@@ -21,6 +21,15 @@
       font-size: 70px;
       font-weight: 700;
       padding: 0 5px 10px;
+      @media (max-width: 768px) {
+        font-size: 42px;
+      }
+      @media (max-width: 455px) {
+        font-size: 30px;
+      }
+    }
+    @media (max-width: 455px) {
+      height: 70vh;
     }
   }
 }

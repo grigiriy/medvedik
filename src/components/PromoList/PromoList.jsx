@@ -7,7 +7,7 @@ import Content from '../../assets/db/promoList.js';
 class PromoList extends Component {
   render() {
     return (
-      <div className="container fluid d-flex no-wrap">
+      <div className="container fluid d-flex">
         {Content.items.map((item, index) => (
           <PromoCard content={item} />
         ))}

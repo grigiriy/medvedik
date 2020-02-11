@@ -1,5 +1,13 @@
 ul.catalog-menu {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
+  @media (max-width: 455px) {
+    padding: 0;
+  }
   li a {
     font-family: 'Nunito', sans-serif;
     padding-right: 30px;

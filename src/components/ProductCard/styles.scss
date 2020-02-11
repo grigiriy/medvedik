@@ -1,12 +1,21 @@
 .card {
-  max-width: calc(33.33% - 40px);
-  padding: 20px;
-
+  max-width: calc(33.33% - 20px);
+  padding: 10px;
+  @media (max-width: 768px) {
+    max-width: calc(50% - 20px);
+  }
+  @media (max-width: 455px) {
+    max-width: calc(50% - 5px);
+    padding: 0 0 20px;
+  }
   .card_attributes {
     display: flex;
     justify-content: space-between;
     p {
       font-family: 'Nunito', sans-serif;
+      @media (max-width: 455px) {
+        margin: 5px;
+      }
     }
   }
   .card_image {
