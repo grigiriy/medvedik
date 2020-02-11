@@ -1,33 +1,17 @@
 import React, { Component } from 'react';
 
-import left_img from '../../assets/images/left_img.jpg';
-import right_img from '../../assets/images/right_img.jpg';
-
-let left = {
-  image: left_img,
-  text: 'ручная',
-  position: 'left',
-  linkTo: ''
-};
-
-let right = {
-  image: right_img,
-  text: 'вышивка',
-  position: 'right',
-  linkTo: ''
-};
-
 class HalfSideBlock extends Component {
   render() {
-    const side = this.props.side;
-    const content = side === 'left' ? left : side === 'right' ? right : 'error';
+    const { imageSrc, text, position, link } = this.props.side;
 
     return (
       <div
-        className={'halfScreenBlock ' + content.position}
-        style={{ backgroundImage: `url(${content.image})` }}
+        className={'halfScreenBlock ' + position}
+        style={{
+          backgroundImage: `url(${require('../../assets/images/' + imageSrc)})`
+        }}
       >
-        <p className="h3">{content.text}</p>
+        <p className="h3">{text}</p>
       </div>
     );
   }
