@@ -1,7 +1,12 @@
 ul.catalog-menu {
   display: flex;
-  li {
+  li a {
     font-family: 'Nunito', sans-serif;
     padding-right: 30px;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: #363636;
+    }
   }
 }

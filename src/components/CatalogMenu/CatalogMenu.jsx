@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 
 import './styles.scss';
 
+import Content from '../../assets/db/catalogMenu.js';
+
 class ProductCard extends Component {
   render() {
     return (
       <ul className="catalog-menu">
-        <li>Футболки</li>
-        <li>Толстовки</li>
-        <li>Рубашки</li>
-        <li>Интерьер</li>
-        <li>Свой дизайн</li>
+        {Content.items.map((item, index) => (
+          <li>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))}
       </ul>
     );
   }
