@@ -2,19 +2,9 @@ import React, { Component } from 'react';
 
 import './styles.scss';
 
-import left_img from '../../assets/images/loveBox.jpg';
-import right_img from '../../assets/images/coupleBox.jpg';
-import centralContent from '../../assets/images/heart.png';
-
 class PromoCard extends Component {
   render() {
-    const { image } = this.props;
-    const { headLine } = this.props;
-    const { content } = this.props;
-    const { center } = this.props;
-
-    const backImage =
-      image === 'left' ? left_img : image === 'right' ? right_img : null;
+    const { imageSrc, headLine, content, center } = this.props.content;
 
     function CentralCard() {
       return (
@@ -25,7 +15,7 @@ class PromoCard extends Component {
             })}
           </ul>
           <div>
-            <img src={centralContent} alt="" />
+            <img src={require('../../assets/images/' + imageSrc)} alt="" />
           </div>
         </div>
       );
@@ -35,7 +25,10 @@ class PromoCard extends Component {
       return (
         <div
           className="col side"
-          style={{ backgroundImage: `url(${backImage})` }}
+          style={{
+            backgroundImage: `url(${require('../../assets/images/' +
+              imageSrc)})`
+          }}
         >
           <div>
             <p className="h3">{headLine}</p>
