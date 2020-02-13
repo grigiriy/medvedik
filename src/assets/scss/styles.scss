@@ -11,8 +11,12 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap&subset=cyrillic');
 
+@import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700&display=swap');
 html,
 body,
 .App {
@@ -20,10 +24,11 @@ body,
 }
 
 * {
-  font-family: 'Impact';
+  // font-family: 'Impact';
+  // font-family: 'Lobster', cursive;
+  font-family: 'Oswald';
   font-size: 18px;
 }
-
 .d-flex {
   display: flex;
 }
