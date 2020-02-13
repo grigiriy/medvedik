@@ -1,0 +1,39 @@
+.columns {
+  &.container {
+    display: block;
+  }
+  column-gap: 20px;
+  column-count: 3;
+  @media (max-width: 768px) {
+    column-count: 2;
+  }
+  @media (max-width: 455px) {
+    column-count: 1;
+  }
+  .preview {
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    img {
+      max-width: 100%;
+    }
+    .detail {
+      transition: all 0.5s;
+      padding: 10px;
+      position: absolute;
+      background: #0000008a;
+      bottom: 0;
+      color: #fff;
+      opacity: 0;
+      &.withAtts {
+        opacity: 1;
+      }
+      p {
+        margin: 0;
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
+    }
+  }
+}
