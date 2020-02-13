@@ -9,7 +9,7 @@ class PromoList extends Component {
     return (
       <div className="container fluid d-flex">
         {Content.items.map((item, index) => (
-          <PromoCard content={item} />
+          <PromoCard content={item} key={item.id} />
         ))}
       </div>
     );

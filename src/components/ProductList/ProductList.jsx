@@ -9,7 +9,7 @@ class ProductList extends Component {
     return (
       <div class="container clearfix">
         {Content.products.map((item, index) => (
-          <ProductCard content={item} />
+          <ProductCard content={item} key={item.id} />
         ))}
       </div>
     );

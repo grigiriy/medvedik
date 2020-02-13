@@ -10,7 +10,7 @@ class MainScreen extends Component {
       <header>
         <ul className="topMenu">
           {Content.items.map((item, index) => (
-            <li>
+            <li key={index}>
               {item.link === null ? (
                 <hr />
               ) : (
