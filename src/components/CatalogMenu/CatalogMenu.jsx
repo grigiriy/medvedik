@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -10,7 +11,7 @@ class ProductCard extends Component {
       <ul className="catalog-menu">
         {Content.items.map((item, index) => (
           <li>
-            <a href={item.link}>{item.name}</a>
+            <Link to={`/shop/${item.link}`}>{item.name}</Link>
           </li>
         ))}
       </ul>

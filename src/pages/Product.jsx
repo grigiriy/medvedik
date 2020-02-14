@@ -2,16 +2,15 @@ import React from 'react';
 
 import PromoList from '../components/PromoList';
 import CatalogMenu from '../components/CatalogMenu';
-import ProductList from '../components/ProductList';
 
-function Shop() {
+function Product() {
   return (
     <>
+      <h1>Name</h1>
       <PromoList />
       <CatalogMenu />
-      <ProductList />
     </>
   );
 }
 
-export default Shop;
+export default Product;

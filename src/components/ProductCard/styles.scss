@@ -8,19 +8,32 @@
     max-width: calc(50% - 5px);
     padding: 0 0 20px;
   }
-  .card_attributes {
-    display: flex;
-    justify-content: space-between;
-    p {
-      font-family: 'Nunito', sans-serif;
-      @media (max-width: 455px) {
-        margin: 5px;
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      .card_image {
+        img {
+          transform: rotate(2deg) scale(1.1);
+        }
       }
     }
-  }
-  .card_image {
-    img {
-      max-width: 100%;
+    .card_attributes {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-family: 'Nunito', sans-serif;
+        @media (max-width: 455px) {
+          margin: 5px;
+        }
+      }
+    }
+    .card_image {
+      overflow: hidden;
+      img {
+        transition: all 0.5s;
+        max-width: 100%;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
+import heart from '../../assets/images/heart_logo.png';
 
 import Content from '../../assets/db/navMenu.js';
 
@@ -15,7 +16,7 @@ class MainScreen extends Component {
               {item.link === null ? (
                 <hr />
               ) : (
-                <Link to={item.link}>{item.name}</Link>
+                <Link to={`/${item.link}`}>{item.name}</Link>
               )}
             </li>
           ))}

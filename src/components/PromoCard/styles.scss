@@ -66,8 +66,17 @@
     }
     ul {
       padding-left: 60px;
-      color: #e0479f;
       font-size: 36px;
+      color: #e0479f;
+      li {
+        &::selection {
+          color: #550f2abb;
+        }
+        &::-moz-selection {
+          color: #550f2abb; /* Firefox */
+        }
+      }
+
       @media (max-width: 1024px) {
         display: flex;
         flex-wrap: wrap;

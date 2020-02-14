@@ -32,7 +32,12 @@ body,
 .d-flex {
   display: flex;
 }
-
+::selection {
+  background: #fd5595bb; /* Safari */
+}
+::-moz-selection {
+  background: #fd5595bb; /* Firefox */
+}
 ul {
   list-style: none;
   padding-left: 0;
