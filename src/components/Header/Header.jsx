@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -14,7 +15,7 @@ class MainScreen extends Component {
               {item.link === null ? (
                 <hr />
               ) : (
-                <a href={item.link}>{item.name}</a>
+                <Link to={item.link}>{item.name}</Link>
               )}
             </li>
           ))}
