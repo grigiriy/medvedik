@@ -11,9 +11,9 @@ class PromoCard extends Component {
       return (
         <div className="col center d-flex">
           <ul>
-            {headLine.map((item, index) => {
+            {headLine.map(item => {
               return (
-                <li key={index}>
+                <li key={item[1]}>
                   <Link to={item[1]}>{item[0]}</Link>
                 </li>
               );

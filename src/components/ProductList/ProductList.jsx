@@ -7,9 +7,9 @@ import Content from '../../assets/db/productList.js';
 class ProductList extends Component {
   render() {
     return (
-      <div class="container clearfix">
-        {Content.products.map((item, index) => (
-          <ProductCard content={item} key={item.id} />
+      <div className="container clearfix">
+        {Object.keys(Content.products).map((item, index) => (
+          <ProductCard content={Content.products[item]} />
         ))}
       </div>
     );

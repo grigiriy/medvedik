@@ -4,12 +4,12 @@ import './styles.scss';
 
 class HalfSideBlock extends Component {
   render() {
-    const { imageSrc, headLine, position, link, text } = this.props.side;
+    const { imageSrc, headLine, text, price } = this.props.side;
 
     function ImagedBlock() {
       return (
         <div
-          className={'halfScreenBlock ' + position}
+          className={'halfScreenBlock '}
           style={{
             backgroundImage: `url(${require('../../assets/images/' +
               imageSrc)})`
@@ -22,19 +22,30 @@ class HalfSideBlock extends Component {
 
     function TextBlock() {
       return (
-        <div className={'halfScreenBlock textOnly ' + position}>
+        <div className={'halfScreenBlock textOnly '}>
           <p className="h4">{headLine}</p>
           <p>{text}</p>
         </div>
       );
     }
 
+    function ProductBlock() {
+      return (
+        <div className={'halfScreenBlock textOnly '}>
+          <p className="h4">{headLine}</p>
+          <p>{text}</p>
+          <p class="h4">{price} ₽</p>
+        </div>
+      );
+    }
+
     if (imageSrc) {
       return <ImagedBlock />;
+    } else if (price) {
+      return <ProductBlock />;
     }
     return <TextBlock />;
   }
-  Ъ;
 }
 
 export default HalfSideBlock;

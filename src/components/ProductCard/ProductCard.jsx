@@ -5,6 +5,7 @@ import './styles.scss';
 class ProductCard extends Component {
   render() {
     const { name, price, imageSrc, slug } = this.props.content;
+
     return (
       <div className="card">
         <Link to={`/product/${slug}`}>

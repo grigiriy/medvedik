@@ -8,7 +8,7 @@ class PromoList extends Component {
   render() {
     return (
       <div className="container fluid d-flex">
-        {Content.items.map((item, index) => (
+        {Content.items.map(item => (
           <PromoCard content={item} key={item.id} />
         ))}
       </div>

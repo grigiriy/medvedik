@@ -8,8 +8,8 @@ class PreviewList extends Component {
   render() {
     return (
       <div className="container columns">
-        {Content.products.map((item, index) => (
-          <PreviewCard content={item} key={item.id} />
+        {Object.keys(Content.products).map((item, index) => (
+          <PreviewCard content={Content.products[item]} key={item.id} />
         ))}
       </div>
     );

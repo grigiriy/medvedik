@@ -5,13 +5,9 @@
   display: flex;
   background-size: cover;
   background-position: center;
-  &.left {
-    p.h3 {
-      margin-left: auto;
-      color: #fff;
-    }
-  }
+  justify-content: flex-end;
   p.h3 {
+    color: #fff;
     font-family: 'Lobster', cursive;
     align-self: flex-end;
     padding: 0;
@@ -24,6 +20,12 @@
     }
     @media (max-width: 455px) {
       font-size: 30px;
+    }
+  }
+  & + .halfScreenBlock {
+    justify-content: flex-start;
+    p.h3 {
+      color: inherit;
     }
   }
   &.textOnly {

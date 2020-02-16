@@ -9,8 +9,8 @@ class ProductCard extends Component {
   render() {
     return (
       <ul className="catalog-menu">
-        {Content.items.map((item, index) => (
-          <li>
+        {Content.items.map(item => (
+          <li key={item.link}>
             <Link to={`/shop/${item.link}`}>{item.name}</Link>
           </li>
         ))}

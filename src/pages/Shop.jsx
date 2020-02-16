@@ -7,7 +7,7 @@ import ProductList from '../components/ProductList';
 function Shop() {
   return (
     <>
-      <PromoList />
+      {/* <PromoList /> */}
       <CatalogMenu />
       <ProductList />
     </>
