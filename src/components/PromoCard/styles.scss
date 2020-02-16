@@ -6,6 +6,10 @@
     text-align: right;
     width: calc(25% - 50px);
     padding: 20px;
+    text-decoration: none;
+    &:hover {
+      transition: all 0.2s;
+    }
     div {
       margin-left: auto;
       margin-top: auto;
@@ -69,11 +73,25 @@
       font-size: 36px;
       color: #e0479f;
       li {
-        &::selection {
-          color: #550f2abb;
-        }
-        &::-moz-selection {
-          color: #550f2abb; /* Firefox */
+        a {
+          transition: all 0.2s;
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            color: #f15db4;
+            &::selection {
+              color: #e0479f;
+            }
+            &::-moz-selection {
+              color: #e0479f;
+            }
+          }
+          &::selection {
+            color: #550f2abb;
+          }
+          &::-moz-selection {
+            color: #550f2abb;
+          }
         }
       }
 

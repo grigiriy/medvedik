@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import HalfSideBlock from './HalfSideBlock';
+import HalfSideBlock from '../HalfSideBlock';
 
 import './styles.scss';
 
-import Content from '../../assets/db/mainScreen.js';
 class MainScreen extends Component {
   render() {
+    const { left, right } = this.props.content;
+
     return (
       <section className="mainBlock">
-        <HalfSideBlock side={Content.left} />
-        <HalfSideBlock side={Content.right} />
+        <HalfSideBlock side={left} />
+        <HalfSideBlock side={right} />
       </section>
     );
   }

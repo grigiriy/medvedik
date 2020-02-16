@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
 class PromoCard extends Component {
   render() {
-    const { imageSrc, headLine, content, center } = this.props.content;
+    const { imageSrc, headLine, content, center, link } = this.props.content;
 
     function CentralCard() {
       return (
         <div className="col center d-flex">
           <ul>
             {headLine.map((item, index) => {
-              return <li key={index}>{item}</li>;
+              return (
+                <li key={index}>
+                  <Link to={item[1]}>{item[0]}</Link>
+                </li>
+              );
             })}
           </ul>
           <div>
@@ -23,7 +28,8 @@ class PromoCard extends Component {
 
     function SideCard() {
       return (
-        <div
+        <Link
+          to={link}
           className="col side"
           style={{
             backgroundImage: `url(${require('../../assets/images/' +
@@ -34,7 +40,7 @@ class PromoCard extends Component {
             <p className="h3">{headLine}</p>
             <p className="h4">{content}</p>
           </div>
-        </div>
+        </Link>
       );
     }
 
