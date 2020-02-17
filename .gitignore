@@ -13,6 +13,7 @@
 
 #images and other private content
 /src/assets/images
+/src/assets/fonts
 
 #temporal content
 /src/assets/db

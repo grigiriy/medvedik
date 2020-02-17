@@ -5,7 +5,7 @@ import './styles.scss';
 
 import Content from '../../assets/db/navMenu.js';
 
-class MainScreen extends Component {
+class Header extends Component {
   render() {
     return (
       <header>
@@ -26,4 +26,4 @@ class MainScreen extends Component {
   }
 }
 
-export default MainScreen;
+export default Header;
