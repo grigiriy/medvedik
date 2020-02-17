@@ -6,14 +6,10 @@ import ProductList from '../components/ProductList';
 import Content from '../assets/db/productList.js';
 
 function Product({ match }) {
-  // const productDetails = {
-  //   left: Content.products[match.params.slug],
-  //   right: Content.products[match.params.slug]
-  // };
-
+  const product = Content.filter(item => item.slug === match.params.slug)[0];
   const productDetails = {
     left: {
-      imageSrc: Content.products[match.params.slug].imageSrc,
+      imageSrc: product.imageSrc,
       linkTo: null,
       headLine: null,
       text: null
@@ -21,9 +17,9 @@ function Product({ match }) {
     right: {
       imageSrc: null,
       linkTo: null,
-      headLine: Content.products[match.params.slug].name,
-      text: Content.products[match.params.slug].description,
-      price: Content.products[match.params.slug].price
+      headLine: product.name,
+      text: product.description,
+      price: product.price
     }
   };
 

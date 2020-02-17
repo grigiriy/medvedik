@@ -34,7 +34,7 @@ class HalfSideBlock extends Component {
         <div className={'halfScreenBlock textOnly '}>
           <p className="h4">{headLine}</p>
           <p>{text}</p>
-          <p class="h4">{price} ₽</p>
+          <p className="h4">{price} ₽</p>
         </div>
       );
     }
