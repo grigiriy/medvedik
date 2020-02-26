@@ -6,10 +6,11 @@ import Content from '../../assets/db/productList.js';
 
 class PreviewList extends Component {
   render() {
+    console.log(Content);
     return (
       <div className="container columns">
-        {Object.keys(Content.products).map((item, index) => (
-          <PreviewCard content={Content.products[item]} key={item.id} />
+        {Object.keys(Content).map((item, index) => (
+          <PreviewCard content={Content[item]} key={Content[item].id} />
         ))}
       </div>
     );

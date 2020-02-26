@@ -9,11 +9,12 @@ html,
 body,
 .App {
   overflow-x: hidden;
+  font-size: 18px;
 }
 
 * {
   font-family: 'Oswald';
-  font-size: 18px;
+  font-size: 1em;
 }
 p {
   font: 1.5em / 1.5em 'Alice';
