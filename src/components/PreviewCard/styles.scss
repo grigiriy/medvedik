@@ -16,6 +16,9 @@
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    &:hover .detail {
+      opacity: 1;
+    }
     img {
       max-width: 100%;
     }
@@ -27,9 +30,6 @@
       bottom: 0;
       color: #fff;
       opacity: 0;
-      &.withAtts {
-        opacity: 1;
-      }
       p {
         margin: 0;
         font-size: 1.5em;
