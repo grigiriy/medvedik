@@ -1,0 +1,42 @@
+.lightBoxBG {
+  background-color: #1e0c1acc;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  top: 0;
+  display: none;
+  &.shown {
+    display: block;
+  }
+  .lightBoxWrap {
+    display: flex;
+    max-width: 800px;
+    margin: 100px auto auto;
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+    .attributes {
+      transition: all 0.5s;
+      padding: 10px 20px 30px;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.726);
+      color: #fff;
+      opacity: 0;
+      left: auto;
+      bottom: 0;
+      width: calc(100% - 40px);
+      p {
+        font-size: 1.5em;
+      }
+      p + p {
+        font-size: 1.2em;
+      }
+    }
+    &:hover {
+      .attributes {
+        opacity: 1;
+      }
+    }
+  }
+}

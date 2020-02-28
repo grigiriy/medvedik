@@ -4,13 +4,31 @@ import './styles.scss';
 
 class PreviewCard extends Component {
   state = {
-    atts: false
+    atts: false,
+    lb: {
+      content: {}
+    }
   };
 
-  toggleDescription = e => {
+  toggleDescription = async e => {
     this.setState({
       atts: e
     });
+  };
+
+  setContent = async (imageSrc, description, name) => {
+    this.setState({
+      lb: {
+        content: {
+          img: imageSrc,
+          text: description,
+          name: name
+        }
+      }
+    });
+    setTimeout(() => {
+      this.props.initLightBox(!this.props.lightBox, this.state.lb.content);
+    }, 0);
   };
 
   render() {
@@ -18,6 +36,7 @@ class PreviewCard extends Component {
     const { atts } = this.state;
 
     let classList = 'detail';
+
     if (atts) {
       classList += ' withAtts';
     }
@@ -27,7 +46,9 @@ class PreviewCard extends Component {
         className="preview"
         onMouseEnter={() => this.toggleDescription(true)}
         onMouseLeave={() => this.toggleDescription(false)}
-        onM
+        onClick={() => {
+          this.setContent(imageSrc, description, name);
+        }}
       >
         <img src={require('../../assets/images/' + imageSrc)} alt="" />
         <div className={classList}>
