@@ -6,16 +6,23 @@ import About from './pages/About.jsx';
 import Shop from './pages/Shop.jsx';
 import Product from './pages/Product.jsx';
 
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 import './assets/scss/styles.scss';
 
+const cw = window.innerWidth;
+
 class App extends Component {
+  state = {
+    mobile: cw < 1024 ? true : false
+  };
+
   render() {
     return (
       <Router>
         <div className="App">
-          <Header />
+          <Header mobile={this.state.mobile} />
           <Switch>
             <Route path="/" exact component={MainPage} />
             <Route path="/about" component={About} />
@@ -24,6 +31,7 @@ class App extends Component {
             <Route path="/product/:slug" component={Product} />
           </Switch>
         </div>
+        <Footer />
       </Router>
     );
   }
