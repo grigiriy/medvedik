@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 
 import './styles.scss';
 
@@ -14,22 +13,22 @@ class Contacts extends Component {
         <div class="half">
           <p className="h3"></p>
           <p className="h3">
-            Телефон: <Link to={`tel:${credits.phone}`}>{credits.phone}</Link>
+            Телефон: <a href={`tel:${credits.phone}`}>{credits.phone}</a>
           </p>
           <p className="h3">
-            Email: <Link to={`mailto:${credits.email}`}>{credits.email}</Link>
+            Email: <a href={`mailto:${credits.email}`}>{credits.email}</a>
           </p>
         </div>
         <div class="half">
           <p className="h3">
-            <Link to={credits.inst}>
+            <a href={credits.inst}>
               <i class="icon-instagram"></i> @mashamedvedik
-            </Link>
+            </a>
           </p>
           <p className="h3">
-            <Link to={credits.inst}>
+            <a href={credits.inst}>
               <i class="icon-vkontakte"></i> @mashamedvedik
-            </Link>
+            </a>
           </p>
         </div>
       </div>
