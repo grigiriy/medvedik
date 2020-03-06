@@ -8,12 +8,14 @@ import Layout from '../components/Layout';
 
 import Content from '../assets/db/mainScreen.js';
 
+const cw = window.innerWidth;
 class IndexPage extends Component {
   state = {
     lightBox: {
       isOpen: false,
       content: {}
-    }
+    },
+    mobile: cw < 1024 ? true : false
   };
 
   initLightBox = (e, content) => {
@@ -27,7 +29,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout mobile={this.state.mobile}>
         <MainScreen content={Content} />
         <PromoList />
         <PreviewList

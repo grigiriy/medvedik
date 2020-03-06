@@ -27,8 +27,10 @@ class HalfSideBlock extends Component {
       product
     } = this.props.side;
 
-    function ImagedBlock() {
-      const classList = product ? 'halfScreenBlock product' : 'halfScreenBlock';
+    const { mobile } = this.props.mobile;
+
+    function ImagedBlock(mobile) {
+      let classList = mobile ? 'halfScreenBlock mobileView' : 'halfScreenBlock';
       return (
         <div
           className={classList}
@@ -41,9 +43,12 @@ class HalfSideBlock extends Component {
       );
     }
 
-    function TextBlock() {
+    function TextBlock(mobile) {
+      let classList = mobile
+        ? 'halfScreenBlock textOnly mobileView'
+        : 'halfScreenBlock textOnly';
       return (
-        <div className={'halfScreenBlock textOnly '}>
+        <div className={classList}>
           <p className="h4">{headLine}</p>
           <p>{text}</p>
         </div>
@@ -51,8 +56,11 @@ class HalfSideBlock extends Component {
     }
 
     function ProductBlock(props) {
+      let classList = mobile
+        ? 'halfScreenBlock textOnly mobileView'
+        : 'halfScreenBlock textOnly';
       return (
-        <div className={'halfScreenBlock textOnly '}>
+        <div className={classList}>
           <p className="h4 header">{headLine}</p>
           <p>{text}</p>
           <p className="attributes">

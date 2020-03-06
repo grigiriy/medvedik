@@ -1,3 +1,6 @@
 .mainBlock {
   display: flex;
+  &.mobileView {
+    flex-direction: column;
+  }
 }

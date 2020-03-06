@@ -1,4 +1,13 @@
 .halfScreenBlock {
+  &.mobileView {
+    order: 1;
+    width: 100vw;
+    background-position: top;
+    &.textOnly {
+      padding: 0 10px;
+      width: calc(100vw - 20px);
+    }
+  }
   color: #333;
   width: 50vw;
   height: calc(100vh - 7vw);
@@ -33,9 +42,6 @@
   }
   &.product {
     position: sticky;
-    @media (max-width: 455px) {
-      width: 100vw;
-    }
   }
   &.textOnly {
     flex-direction: column;
@@ -43,11 +49,9 @@
     height: 100%;
     @media (max-width: 768px) {
       font-size: 42px;
-      padding: 0;
     }
     @media (max-width: 455px) {
       font-size: 12px;
-      width: 100vw;
     }
     .h4 {
       font-family: 'Lobster', cursive;
