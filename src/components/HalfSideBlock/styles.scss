@@ -6,6 +6,9 @@
   background-size: cover;
   background-position: center;
   justify-content: flex-end;
+  @media (max-width: 455px) {
+    height: 70vh;
+  }
   p.h3 {
     color: #fff;
     font-family: 'Lobster', cursive;
@@ -28,22 +31,74 @@
       color: inherit;
     }
   }
+  &.product {
+    position: sticky;
+    @media (max-width: 455px) {
+      width: 100vw;
+    }
+  }
   &.textOnly {
     flex-direction: column;
     padding: 0 7rem;
+    height: 100%;
+    @media (max-width: 768px) {
+      font-size: 42px;
+      padding: 0;
+    }
+    @media (max-width: 455px) {
+      font-size: 12px;
+      width: 100vw;
+    }
     .h4 {
       font-family: 'Lobster', cursive;
       font-size: 50px;
-      margin: 7rem 0 3rem;
+      @media (max-width: 455px) {
+        font-size: 36px;
+      }
+      margin: 0;
+      &.header {
+        margin-top: 30px;
+      }
     }
-    @media (max-width: 768px) {
-      font-size: 42px;
+    .attributes {
+      margin-top: 0;
+      span {
+        display: block;
+        &.grouped {
+          margin-top: 20px;
+          display: flex;
+          span {
+            cursor: pointer;
+            margin-right: 10px;
+            &.chosen {
+              color: #e0479f;
+            }
+            &.colorItem {
+              width: 20px;
+              height: 20px;
+              border-radius: 20px;
+              border: solid 1px #ccc;
+            }
+          }
+        }
+        &.small {
+          font-size: 0.6em;
+          cursor: pointer;
+          margin-top: -10px;
+        }
+      }
     }
-    @media (max-width: 455px) {
-      font-size: 36px;
+    .ordering {
+      display: flex;
+      justify-content: space-between;
+      button {
+        background: #ffc7ed;
+        background: linear-gradient(90deg, #ffc7ed 0%, #a0fffd 100%);
+        border: none;
+        color: #e0479f;
+        padding: 20px;
+        cursor: pointer;
+      }
     }
-  }
-  @media (max-width: 455px) {
-    height: 70vh;
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 import './styles.scss';
 
@@ -30,9 +30,9 @@ class Header extends Component {
             </li>
           ))}
           <li key="ig" className="igSvg">
-            <Link to="https://www.instagram.com/mashamedvedik/">
-              <img src={require('../../assets/images/ig.svg')} alt="" />
-            </Link>
+            <a href="https://www.instagram.com/mashamedvedik/">
+              <img src={require('../../images/ig.svg')} alt="" />
+            </a>
           </li>
         </ul>
         {this.props.mobile && (

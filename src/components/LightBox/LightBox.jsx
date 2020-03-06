@@ -34,7 +34,7 @@ class LightBox extends Component {
           }
         >
           <div className="lightBoxWrap">
-            <img src={require('../../assets/images/' + img)} alt="" />
+            <img src={require('../../images/' + img)} alt="" />
             <div class="attributes">
               <p>{name}</p>
               <p>{text}</p>

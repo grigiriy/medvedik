@@ -6,11 +6,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Oswald:700&display=swap');
 
-.App {
-  overflow-x: hidden;
-  font-size: 18px;
-}
-
 * {
   font-family: 'Oswald';
   font-size: 1em;
@@ -28,6 +23,11 @@ p {
   &.tc {
     text-align: center;
   }
+}
+body {
+  overflow-x: hidden;
+  font-size: 18px;
+  margin: 0;
 }
 .d-flex {
   display: flex;

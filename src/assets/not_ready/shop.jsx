@@ -4,8 +4,7 @@ import PromoList from '../components/PromoList';
 import CatalogMenu from '../components/CatalogMenu';
 import ProductList from '../components/ProductList';
 
-function Shop({ match }) {
-  console.log(match);
+function shop({ match }) {
   return (
     <>
       <PromoList />
@@ -15,4 +14,4 @@ function Shop({ match }) {
   );
 }
 
-export default Shop;
+export default shop;

@@ -5,21 +5,19 @@ import ProductList from '../components/ProductList';
 
 import Content from '../assets/db/productList.js';
 
-function Product({ match }) {
+function product({ match }) {
   const product = Content.filter(item => item.slug === match.params.slug)[0];
   const productDetails = {
     left: {
       imageSrc: product.imageSrc,
-      linkTo: null,
-      headLine: null,
-      text: null
+      product: true
     },
     right: {
-      imageSrc: null,
-      linkTo: null,
       headLine: product.name,
       text: product.description,
-      price: product.price
+      price: product.price,
+      sizes: product.sizes,
+      colors: product.colors
     }
   };
 
@@ -32,4 +30,4 @@ function Product({ match }) {
   );
 }
 
-export default Product;
+export default product;

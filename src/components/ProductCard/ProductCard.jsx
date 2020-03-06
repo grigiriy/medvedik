@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 import './styles.scss';
 class ProductCard extends Component {
@@ -10,7 +10,7 @@ class ProductCard extends Component {
       <div className="card">
         <Link to={`/product/${slug}`}>
           <div className="card_image">
-            <img src={require('../../assets/images/' + imageSrc)} alt="" />
+            <img src={require('../../images/' + imageSrc)} alt="" />
           </div>
           <div className="card_attributes">
             <p>{name}</p>

@@ -22,7 +22,7 @@ class PreviewCard extends Component {
           this.setContent(imageSrc, description, name);
         }}
       >
-        <img src={require('../../assets/images/' + imageSrc)} alt="" />
+        <img src={require('../../images/' + imageSrc)} alt="" />
         <div className="detail">
           <p>{name}</p>
           <p>{description}</p>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 import './styles.scss';
 
@@ -20,7 +20,7 @@ class PromoCard extends Component {
             })}
           </ul>
           <div>
-            <img src={require('../../assets/images/' + imageSrc)} alt="" />
+            <img src={require('../../images/' + imageSrc)} alt="" />
           </div>
         </div>
       );
@@ -32,8 +32,7 @@ class PromoCard extends Component {
           to={link}
           className="col side"
           style={{
-            backgroundImage: `url(${require('../../assets/images/' +
-              imageSrc)})`
+            backgroundImage: `url(${require('../../images/' + imageSrc)})`
           }}
         >
           <div>

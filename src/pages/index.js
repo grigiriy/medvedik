@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+
 import MainScreen from '../components/MainScreen';
 import PromoList from '../components/PromoList';
 import PreviewList from '../components/PreviewList';
 import LightBox from '../components/LightBox';
+import Layout from '../components/Layout';
 
 import Content from '../assets/db/mainScreen.js';
 
-class MainPage extends Component {
+class IndexPage extends Component {
   state = {
     lightBox: {
       isOpen: false,
@@ -25,7 +27,7 @@ class MainPage extends Component {
 
   render() {
     return (
-      <>
+      <Layout>
         <MainScreen content={Content} />
         <PromoList />
         <PreviewList
@@ -38,9 +40,9 @@ class MainPage extends Component {
           lightBox={this.state.lightBox.isOpen}
           initLightBox={this.initLightBox}
         />
-      </>
+      </Layout>
     );
   }
 }
 
-export default MainPage;
+export default IndexPage;
