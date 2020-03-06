@@ -11,6 +11,7 @@ class Footer extends Component {
       <section className="footer">
         <footer>
           <ul className="botMenu">
+            <li key="copyright">© Maria Medvedik 2020</li>
             {Content.items.map(item => {
               if (item.inFooter)
                 return (
@@ -30,7 +31,7 @@ class Footer extends Component {
               </a>
             </li>
           </ul>
-          <h1 className="footerBack">Masha Medvedik</h1>
+          <h1 className="footerBack">Maria Medvedik</h1>
         </footer>
       </section>
     );

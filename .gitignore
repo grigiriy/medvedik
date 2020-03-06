@@ -42,4 +42,4 @@ pids
 
 # gatsby files
 .cache/
-public
+public/

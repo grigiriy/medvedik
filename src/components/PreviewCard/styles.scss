@@ -16,7 +16,7 @@
     flex-direction: column;
     position: relative;
     cursor: pointer;
-    &:hover .detail {
+    .detail.withAtts {
       opacity: 1;
     }
     img {

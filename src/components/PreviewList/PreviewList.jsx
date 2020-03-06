@@ -15,6 +15,7 @@ class PreviewList extends Component {
             lightBox={this.props.lightBox}
             initLightBox={this.props.initLightBox}
             LbContent={this.props.LbContent}
+            mobile={this.props.mobile}
           />
         ))}
       </div>

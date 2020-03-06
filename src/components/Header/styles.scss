@@ -26,7 +26,8 @@ header {
       z-index: 1;
       .igSvg {
         img {
-          height: 30px;
+          height: 35px;
+          margin-bottom: -10px;
         }
       }
       & hr {
@@ -127,6 +128,9 @@ header {
           top: -8px;
         }
       }
+    }
+    + section {
+      padding-top: 40px;
     }
   }
 }

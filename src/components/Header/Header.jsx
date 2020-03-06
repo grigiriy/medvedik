@@ -47,7 +47,7 @@ class Header extends Component {
             <span></span>
           </div>
         )}
-        <h1 className="headerBack">Masha Medvedik</h1>
+        <h1 className="headerBack">Maria Medvedik</h1>
       </header>
     );
   }

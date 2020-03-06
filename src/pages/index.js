@@ -34,6 +34,7 @@ class IndexPage extends Component {
           LbContent={this.state.lightBox.content}
           lightBox={this.state.lightBox.isOpen}
           initLightBox={this.initLightBox}
+          mobile={this.state.mobile}
         />
         <LightBox
           LbContent={this.state.lightBox.content}
