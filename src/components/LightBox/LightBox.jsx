@@ -5,8 +5,9 @@ import './styles.scss';
 class LightBox extends Component {
   clickDetect = (e, bool) => {
     if (
-      e.classList.contains('lightBoxWrap') ||
-      e.parentElement.classList.contains('lightBoxWrap')
+      e.classList.contains('lightBoxContent') ||
+      e.parentElement.classList.contains('lightBoxContent') ||
+      e.parentElement.classList.contains('attributes')
     ) {
       return !bool;
     } else {
@@ -34,10 +35,12 @@ class LightBox extends Component {
           }
         >
           <div className="lightBoxWrap">
-            <img src={require('../../images/' + img)} alt="" />
-            <div class="attributes">
-              <p>{name}</p>
-              <p>{text}</p>
+            <div className="lightBoxContent">
+              <img src={require('../../images/' + img)} alt="" />
+              <div class="attributes">
+                <p>{name}</p>
+                <p>{text}</p>
+              </div>
             </div>
           </div>
         </div>

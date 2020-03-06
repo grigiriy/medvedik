@@ -11,31 +11,39 @@
   }
   .lightBoxWrap {
     display: flex;
-    max-width: 800px;
+    // max-width: 800px;
     margin: 100px auto auto;
-    background-color: #fff;
+    // background-color: #fff;
     z-index: 10;
     position: relative;
-    .attributes {
-      transition: all 0.5s;
-      padding: 10px 20px 30px;
-      position: absolute;
-      background: rgba(0, 0, 0, 0.726);
-      color: #fff;
-      opacity: 0;
-      left: auto;
-      bottom: 0;
-      width: calc(100% - 40px);
-      p {
-        font-size: 1.5em;
+    justify-content: center;
+    .lightBoxContent {
+      position: relative;
+      img {
+        max-height: calc(100vh - 150px);
       }
-      p + p {
-        font-size: 1.2em;
-      }
-    }
-    &:hover {
       .attributes {
-        opacity: 1;
+        transition: all 0.5s;
+        padding: 10px 20px 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.726);
+        color: #fff;
+        opacity: 0;
+        left: auto;
+        bottom: 5px;
+        max-width: inherit;
+        min-width: calc(100% - 40px);
+        p {
+          font-size: 1.5em;
+        }
+        p + p {
+          font-size: 1.2em;
+        }
+      }
+      &:hover {
+        .attributes {
+          opacity: 1;
+        }
       }
     }
   }
