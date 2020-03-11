@@ -102,6 +102,9 @@ header {
       background: #ffc7ed;
       background: linear-gradient(120deg, #ffc7ed 0%, #a0fffd 100%);
       height: calc(100vh - 40px);
+      .credits {
+        font-size: 0.7em;
+      }
     }
     &.active {
       left: 0;
