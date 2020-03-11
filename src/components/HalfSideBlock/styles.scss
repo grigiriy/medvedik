@@ -1,31 +1,68 @@
-.booksPage {
-  .halfScreenBlock {
-    &.mobileView {
-      &:not(.textOnly) {
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 30vh;
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
 .halfScreenBlock {
   &.mobileView {
     order: 1;
     width: 100vw;
-    background-position: top;
+    background-position-y: top;
     &.textOnly {
       padding: 0 10px;
       width: calc(100vw - 20px);
     }
+    &.booksPage {
+      &:not(.textOnly) {
+        background-size: contain;
+        height: 30vh;
+        margin-bottom: 20px;
+        background-position-x: center;
+      }
+    }
   }
+  background-repeat: no-repeat;
   color: #333;
   width: 50vw;
   height: calc(100vh - 7vw);
   display: flex;
   background-size: cover;
-  background-position: center;
+  background-position-y: center;
+
+  /* === */
+  &.mainScreen-appear {
+    opacity: 0.01;
+    > .h3 {
+      opacity: 0.01;
+    }
+    &:first-child {
+      background-position-x: -50vw;
+    }
+    &:last-child {
+      background-position-x: 50vw;
+    }
+  }
+  &.mainScreen-appear.mainScreen-appear-active {
+    transition: background-position-x 0.8s, opacity 1s;
+    opacity: 1;
+    &:first-child {
+      &:not(.booksPage) {
+        background-position-x: 100%;
+      }
+    }
+    &:last-child {
+      &:not(.booksPage) {
+        background-position-x: 0;
+      }
+    }
+    > .h3 {
+      transition: opacity 1.9s;
+      opacity: 1;
+    }
+  }
+  &:not(.booksPage) {
+    &:first-child {
+      background-position-x: 100%;
+    }
+    &:last-child {
+      background-position-x: 0;
+    }
+  }
   justify-content: flex-end;
   @media (max-width: 455px) {
     height: 70vh;

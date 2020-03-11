@@ -141,11 +141,11 @@ header {
 }
 
 .header-appear.header-appear-active {
-  transition: opacity 1.2s ease-in;
+  transition: opacity 1.2s;
   opacity: 1;
   > ul > li,
   > .headerBack {
     opacity: 1;
-    transition: opacity 1.2s ease-in;
+    transition: opacity 1.2s;
   }
 }
