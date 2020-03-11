@@ -1,0 +1,76 @@
+.book_card {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  .card_image {
+    margin-top: 20px;
+    margin-right: 20px;
+    @media (max-width: 768px) {
+      img {
+        max-width: 80vw;
+      }
+    }
+  }
+  .card_details {
+    p:not(.h3) {
+      @media (max-width: 768px) {
+        font-size: 0.7em;
+      }
+      padding-bottom: 10px;
+    }
+    a {
+      cursor: pointer;
+      border: solid 2px;
+      padding: 10px;
+      @media (max-width: 768px) {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+// .card {
+//   &:last-child {
+//     margin-right: auto;
+//   }
+//   max-width: calc(33.33% - 20px);
+//   padding: 10px;
+//   @media (max-width: 768px) {
+//     max-width: calc(50% - 20px);
+//   }
+//   @media (max-width: 455px) {
+//     max-width: calc(50% - 5px);
+//     padding: 0 0 20px;
+//   }
+//   a {
+//     text-decoration: none;
+//     color: inherit;
+//     &:hover {
+//       .card_image {
+//         img {
+//           transform: rotate(2deg) scale(1.1);
+//         }
+//       }
+//     }
+//     .card_attributes {
+//       display: flex;
+//       justify-content: space-between;
+//       p {
+//         font-family: 'Nunito', sans-serif;
+//         @media (max-width: 455px) {
+//           margin: 5px;
+//         }
+//       }
+//     }
+//     .card_image {
+//       overflow: hidden;
+//       img {
+//         transition: all 0.5s;
+//         max-width: 100%;
+//       }
+//     }
+//   }
+// }

@@ -1,3 +1,15 @@
+.booksPage {
+  .halfScreenBlock {
+    &.mobileView {
+      &:not(.textOnly) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30vh;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 .halfScreenBlock {
   &.mobileView {
     order: 1;

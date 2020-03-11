@@ -21,13 +21,13 @@ class Contacts extends Component {
         </div>
         <div class="half">
           <p className="h3">
-            <a href={credits.inst}>
-              <i class="icon-instagram"></i> @mashamedvedik
+            <a href={`https://instagram/${credits.inst}`}>
+              <i class="icon-instagram"></i> @{credits.inst}
             </a>
           </p>
           <p className="h3">
-            <a href={credits.inst}>
-              <i class="icon-vkontakte"></i> @mashamedvedik
+            <a href={`https://instagram/${credits.vk}`}>
+              <i class="icon-vkontakte"></i> @{credits.vk}
             </a>
           </p>
         </div>

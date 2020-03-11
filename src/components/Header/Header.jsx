@@ -32,9 +32,9 @@ class Header extends Component {
             </li>
           ))}
           <li key="ig" className="igSvg">
-            <a href="https://www.instagram.com/mashamedvedik/">
+            <a href={`https://www.instagram.com/${credits.inst}`}>
               {this.props.mobile ? (
-                <span className="credits">@mashamedvedik</span>
+                <span className="credits">@{credits.inst}</span>
               ) : (
                 <img src={require('../../images/ig.svg')} alt="" />
               )}
@@ -45,7 +45,7 @@ class Header extends Component {
             <>
               <hr />
               <li key="phone" className="credits">
-                <a href={`tel:${credits.phone.replace(/[\-, ]/g, '')}`}>
+                <a href={`tel:${credits.phone.replace(/[-, ]/g, '')}`}>
                   {credits.phone}
                 </a>
               </li>

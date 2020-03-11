@@ -15,7 +15,7 @@ class IndexPage extends Component {
       isOpen: false,
       content: {}
     },
-    mobile: cw < 1024 ? true : false
+    mobile: cw < 768 ? true : false
   };
 
   initLightBox = (e, content) => {

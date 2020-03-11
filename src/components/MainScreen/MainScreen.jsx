@@ -7,7 +7,8 @@ class MainScreen extends Component {
   render() {
     const { left, right } = this.props.content;
 
-    let classList = this.props.mobile ? 'mainBlock mobileView' : 'mainBlock';
+    let classList = this.props.mobile ? 'mainBlock mobileView ' : 'mainBlock ';
+    classList += this.props.classNames;
 
     return (
       <section className={classList}>
