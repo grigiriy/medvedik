@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './styles.scss';
 
@@ -20,7 +21,15 @@ class Header extends Component {
   render() {
     let { credits } = Contacts;
     return (
-      <header className={this.state.open ? 'active' : ''}>
+      <ReactCSSTransitionGroup
+        transitionName="header"
+        transitionAppear={true}
+        transitionAppearTimeout={800}
+        transitionEnter={false}
+        transitionLeave={false}
+        component="header"
+        className={this.state.open ? 'active' : ''}
+      >
         <ul className="topMenu">
           {Content.items.map(item => (
             <li key={item.link}>
@@ -67,8 +76,15 @@ class Header extends Component {
             <span></span>
           </div>
         )}
-        <h1 className="headerBack">Maria Medvedik</h1>
-      </header>
+        {/* <h1 className="headerBack">Maria Medvedik</h1> */}
+        <div
+          className="headerBack"
+          style={{
+            backgroundImage: `url(${require('../../images/' +
+              'MariaMedvedik.png')})`
+          }}
+        ></div>
+      </ReactCSSTransitionGroup>
     );
   }
 }

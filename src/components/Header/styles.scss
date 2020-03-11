@@ -5,15 +5,12 @@ header {
     padding: 0 20px;
     height: 7vw;
     .headerBack {
-      font-family: 'Ultra', cursive;
-      position: absolute;
-      top: -30px;
-      right: 0;
-      margin: 0;
-      font-weight: 700;
-      font-size: 9vw;
-      line-height: 9vw;
-      color: #efefef;
+      height: 7vh;
+      margin-top: -7vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      margin-right: -20px;
     }
     .topMenu {
       display: flex;
@@ -54,7 +51,6 @@ header {
     }
   }
   @media (max-width: 767px) {
-    // display: none !important;
     height: 40px;
     left: -140px;
     transition: all 0.5s;
@@ -64,31 +60,28 @@ header {
     background: #fff;
     min-width: calc(200px + 100vw);
     .headerBack {
-      font-family: 'Ultra', cursive;
-      white-space: nowrap;
-      line-height: 11vw;
-      margin: 0;
-      font-weight: 700;
-      font-size: 7vw;
-      color: #e0479f;
-      opacity: 0.2;
-      z-index: -1;
+      height: 40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      margin-left: -60px;
+      z-index: 1;
     }
     #burger {
-      opacity: 0.5;
       display: flex;
       flex-direction: column;
       min-width: 45px;
       height: 30px;
       margin: 5px 10px;
       margin-left: 145px;
+      z-index: 2;
       cursor: pointer;
       span {
         border-radius: 7px;
         height: 7px;
         margin: 2px;
         width: 100%;
-        background: #e0479f;
+        background: #ea85bf;
         transition: all 0.2s;
       }
     }
@@ -135,5 +128,24 @@ header {
     + section {
       padding-top: 40px;
     }
+  }
+}
+
+/* === */
+.header-appear {
+  opacity: 0.01;
+  > ul > li,
+  > .headerBack {
+    opacity: 0.01;
+  }
+}
+
+.header-appear.header-appear-active {
+  transition: opacity 1.2s ease-in;
+  opacity: 1;
+  > ul > li,
+  > .headerBack {
+    opacity: 1;
+    transition: opacity 1.2s ease-in;
   }
 }
