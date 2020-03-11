@@ -20,7 +20,7 @@ class HalfSideBlock extends Component {
     const { imageSrc, headLine, text, price, sizes, colors } = this.props.side;
 
     const { mobile } = this.props.mobile;
-    const { classNames } = this.props.classNames;
+    const { classNames } = this.props;
 
     function ImagedBlock(mobile) {
       let classList = mobile ? 'halfScreenBlock mobileView' : 'halfScreenBlock';

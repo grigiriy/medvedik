@@ -23,10 +23,18 @@
     }
     a {
       cursor: pointer;
-      border: solid 2px;
       padding: 10px;
+      background: #ffc7ed;
+      background: linear-gradient(90deg, #a0fffd, #ffc7ed, #a0fffd);
+      color: #e0479f;
+      transition: all 1s;
       @media (max-width: 768px) {
         font-size: 0.8em;
+      }
+      &:hover {
+        transition: all 1s;
+        background-position: 50px;
+        color: #922162;
       }
     }
   }
