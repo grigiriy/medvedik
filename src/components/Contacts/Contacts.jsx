@@ -7,10 +7,10 @@ class Contacts extends Component {
     const { credits } = this.props.content;
     return (
       <div className="container">
-        <div class="row">
-          <p class="h1 tc">По всем вопросам:</p>
+        <div className="row">
+          <p className="h1 tc">По всем вопросам:</p>
         </div>
-        <div class="half">
+        <div className="half">
           <p className="h3"></p>
           <p className="h3">
             Телефон: <a href={`tel:${credits.phone}`}>{credits.phone}</a>
@@ -19,15 +19,15 @@ class Contacts extends Component {
             Email: <a href={`mailto:${credits.email}`}>{credits.email}</a>
           </p>
         </div>
-        <div class="half">
+        <div className="half">
           <p className="h3">
             <a href={`https://instagram/${credits.inst}`}>
-              <i class="icon-instagram"></i> @{credits.inst}
+              <i className="icon-instagram"></i> @{credits.inst}
             </a>
           </p>
           <p className="h3">
             <a href={`https://instagram/${credits.vk}`}>
-              <i class="icon-vkontakte"></i> @{credits.vk}
+              <i className="icon-vkontakte"></i> @{credits.vk}
             </a>
           </p>
         </div>
