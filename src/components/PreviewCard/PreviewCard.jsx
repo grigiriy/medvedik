@@ -37,12 +37,12 @@ class PreviewCard extends Component {
       <div
         className="preview"
         onMouseEnter={() => {
-          if (mobile) {
+          if (!mobile) {
             this.toggleDescription(true);
           }
         }}
         onMouseLeave={() => {
-          if (mobile) {
+          if (!mobile) {
             this.toggleDescription(false);
           }
         }}

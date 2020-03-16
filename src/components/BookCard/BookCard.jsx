@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../../components/Button';
 
 import './styles.scss';
 class BookCard extends Component {
@@ -13,7 +14,9 @@ class BookCard extends Component {
         <div className="card_details">
           <p className="h3">{headLine}</p>
           <p>{text}</p>
-          <a href={linkTo}>Перейти в магазин</a>
+          <a href={linkTo}>
+            <Button>Перейти в магазин</Button>
+          </a>
         </div>
       </div>
     );
