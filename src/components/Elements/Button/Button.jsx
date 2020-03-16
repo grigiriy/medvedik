@@ -2,8 +2,7 @@ import React from 'react';
 import './styles.scss';
 
 function Button(props) {
-  let { children } = props;
-  let { classList } = props;
+  let { children, classList } = props;
   return <button className={classList}>{children}</button>;
 }
 

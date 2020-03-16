@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '../../components/Button';
+import Button from '../../components/Elements/Button';
 
 import './styles.scss';
 class BookCard extends Component {

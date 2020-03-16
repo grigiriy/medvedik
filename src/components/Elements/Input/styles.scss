@@ -1,0 +1,19 @@
+span.input {
+  display: block;
+  * {
+    font-family: Alice;
+  }
+  input {
+    margin: 20px 0 30px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px 0;
+  }
+  label {
+    color: #bbbfc4;
+    text-transform: lowercase;
+    position: absolute;
+  }
+}
