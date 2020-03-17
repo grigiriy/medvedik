@@ -7,7 +7,7 @@ function Button(props) {
     return <button className={classList}>{children}</button>;
   } else {
     return (
-      <button class="btn_wrapper">
+      <button className="btn_wrapper">
         <div className={classList}>{children}</div>
       </button>
     );

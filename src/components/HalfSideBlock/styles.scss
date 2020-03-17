@@ -150,7 +150,7 @@
                 margin-top: -13px;
                 margin-left: 10px;
               }
-              &.белый {
+              &.white {
                 border: solid 1px #efefef;
                 &.chosen:before {
                   content: url('../../images/chosen_white.svg');
@@ -202,4 +202,33 @@
 }
 .order_form {
   margin: 20px 0;
+}
+
+.constructor_form {
+  display: flex;
+  flex-direction: column;
+  .main_image {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: relative;
+    > img {
+      visibility: hidden;
+    }
+  }
+  .draggable {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .constructor_types {
+    display: flex;
+    justify-content: space-evenly;
+    .card {
+      max-width: 25%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 }
