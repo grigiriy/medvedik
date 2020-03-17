@@ -7,6 +7,7 @@ button {
   transition: all 1s;
   border: none;
   font-size: 1.4em;
+  margin: auto 0;
   @media (max-width: 768px) {
     font-size: 0.8em;
   }

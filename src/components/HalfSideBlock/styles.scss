@@ -113,6 +113,15 @@
         margin-top: 30px;
       }
     }
+    .h6 {
+      font-family: 'Lobster';
+      margin: 0;
+    }
+    .ordering {
+      font-size: 22px;
+      display: block;
+      margin: 30px 0;
+    }
     .attributes {
       margin-top: 0;
       span {
@@ -127,10 +136,25 @@
               color: #e0479f;
             }
             &.colorItem {
-              width: 20px;
-              height: 20px;
-              border-radius: 20px;
-              border: solid 1px #ccc;
+              width: 30px;
+              height: 30px;
+              border-radius: 30px;
+              transition: all 0.2s;
+              &:hover {
+                transform: scale(1.1);
+              }
+              &.chosen:before {
+                content: url('../../images/chosen.svg');
+                display: block;
+                margin-top: -13px;
+                margin-left: 10px;
+              }
+              &.белый {
+                border: solid 1px #efefef;
+                &.chosen:before {
+                  content: url('../../images/chosen_white.svg');
+                }
+              }
             }
           }
         }
@@ -141,17 +165,29 @@
         }
       }
     }
-    .ordering {
-      display: flex;
-      justify-content: space-between;
-      button {
-        background: #ffc7ed;
-        background: linear-gradient(90deg, #ffc7ed 0%, #a0fffd 100%);
-        border: none;
-        color: #e0479f;
-        padding: 20px;
-        cursor: pointer;
-      }
+  }
+}
+
+.orderDirections {
+  display: flex;
+  justify-content: space-between;
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50px;
+  }
+  p {
+    margin: 0 20px;
+    line-height: 1;
+  }
+}
+
+.uploader_block {
+  .fileUpload {
+    display: flex;
+    p {
+      font-size: 0.7em;
+      margin-left: 20px;
     }
   }
 }
