@@ -21,11 +21,15 @@ class MainScreen extends Component {
         className={classList}
       >
         <HalfSideBlock
-          classNames={this.props.classNames}
+          classNames={this.classNames}
           side={left}
           mobile={this.props.mobile ? this.props.mobile : false}
+          orderDetails={this.props.orderDetails}
+          updateOrderDetails={this.props.updateOrderDetails}
         />
         <HalfSideBlock
+          orderDetails={this.props.orderDetails}
+          updateOrderDetails={this.props.updateOrderDetails}
           classNames={this.props.classNames}
           side={right}
           mobile={this.props.mobile ? this.props.mobile : false}

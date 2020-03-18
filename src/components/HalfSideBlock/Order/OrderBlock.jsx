@@ -9,31 +9,9 @@ import PriceForm from '../Elements/PriceForm';
 import Content from '../../../assets/db/availible.js';
 
 class OrderBlock extends Component {
-  state = {
-    type: this.props.type,
-    color: this.props.color,
-    size: this.props.size,
-    price: 1200
-  };
-
-  updatePrice = () => {
-    console.log(this.state.color);
-    // let colorMult = this.state.color;
-
-    // colorMult = colorMult !== '#333' ? 0 : 300;
-
-    // this.setState({
-    //   price: $value
-    // });
-  };
-
-  // componentDidMount() {
-  //   this.updatePrice();
-  // }
-
   render() {
     const { text } = this.props.side;
-    let type = this.props.type;
+    let { type, price } = this.props.orderDetails;
 
     let sizes = Content[type]['sizes'];
     let colors = Content[type]['colors'];
@@ -49,19 +27,18 @@ class OrderBlock extends Component {
           <SelectAttForm
             type={'size'}
             atts={sizes}
-            selectAtt={this.props.selectAtt}
+            updateOrderDetails={this.props.updateOrderDetails}
           />
           <SelectAttForm
             type={'color'}
             atts={colors}
-            updatePrice={this.updatePrice}
-            selectAtt={this.props.selectAtt}
+            updateOrderDetails={this.props.updateOrderDetails}
           />
         </p>
 
         <UploadForm text={text} type={type} />
 
-        <PriceForm price={this.state.price} />
+        <PriceForm price={price} />
 
         <OrderForm />
 

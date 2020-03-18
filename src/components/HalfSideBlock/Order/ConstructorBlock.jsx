@@ -4,16 +4,6 @@ import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 
 class ConstructorBlock extends Component {
-  state = {
-    type: 'shirt',
-    color: 'white'
-  };
-  switchType = e => {
-    this.setState({
-      type: e
-    });
-  };
-
   render() {
     const types = ['shirt', 'sweetshirt', 'hoodie'];
     const { mobile } = this.props;
@@ -26,11 +16,11 @@ class ConstructorBlock extends Component {
         <div
           className="main_image"
           style={{
-            backgroundImage: `url(${require(`../../../images/${this.state.type}_${this.state.color}.png`)})`
+            backgroundImage: `url(${require(`../../../images/${this.props.orderDetails.type}_${this.props.orderDetails.color[0]}.png`)})`
           }}
         >
           <img
-            src={require(`../../../images/shirt_${this.state.color}.png`)}
+            src={require(`../../../images/shirt_${this.props.orderDetails.color[0]}.png`)}
             alt=""
           />
 
@@ -63,16 +53,13 @@ class ConstructorBlock extends Component {
         </div>
         <div className="constructor_types">
           {types.map(item => (
-            <div
-              key={item}
-              className="card"
-              onClick={e => {
-                this.switchType(e.target.getAttribute('alt'));
-              }}
-            >
+            <div key={item} className="card">
               <img
-                src={require(`../../../images/${item}_${this.state.color}.png`)}
+                src={require(`../../../images/${item}_${this.props.orderDetails.color[0]}.png`)}
                 alt={item}
+                onClick={e => {
+                  this.props.updateOrderDetails('type', item);
+                }}
               />
             </div>
           ))}
