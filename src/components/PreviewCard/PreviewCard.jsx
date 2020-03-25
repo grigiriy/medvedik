@@ -7,24 +7,23 @@ class PreviewCard extends Component {
     atts: false
   };
 
-  setContent = (imageSrc, description, name) => {
-    let content = {
-      img: imageSrc,
-      text: description,
-      name: name
-    };
-    this.props.initLightBox(!this.props.lightBox, content);
-  };
+  // setContent = (imageSrc, description, name) => {
+  //   let content = {
+  //     img: imageSrc,
+  //     text: description,
+  //     name: name
+  //   };
+  //   this.props.initLightBox(!this.props.lightBox, content);
+  // };
 
-  toggleDescription = async e => {
+  toggleDescription = e => {
     this.setState({
       atts: e
     });
-    //todo: reset state of siblings
   };
 
   render() {
-    const { name, description, imageSrc } = this.props.content;
+    let { name, description, imageSrc } = this.props.content;
     const { mobile } = this.props.mobile;
 
     let detailClassList = 'detail';
@@ -33,6 +32,7 @@ class PreviewCard extends Component {
     if (atts) {
       detailClassList += ' withAtts';
     }
+
     return (
       <div
         className="preview"
@@ -46,10 +46,8 @@ class PreviewCard extends Component {
             this.toggleDescription(false);
           }
         }}
-        onClick={() => {
+        onClick={e => {
           if (mobile) {
-            this.setContent(imageSrc, description, name);
-          } else {
             this.toggleDescription(!this.state.atts);
           }
         }}

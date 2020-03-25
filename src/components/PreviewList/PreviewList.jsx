@@ -12,9 +12,6 @@ class PreviewList extends Component {
           <PreviewCard
             content={Content[item]}
             key={Content[item].id}
-            lightBox={this.props.lightBox}
-            initLightBox={this.props.initLightBox}
-            LbContent={this.props.LbContent}
             mobile={this.props.mobile}
           />
         ))}
