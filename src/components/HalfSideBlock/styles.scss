@@ -7,14 +7,6 @@
       padding: 0 10px;
       width: calc(100vw - 20px);
     }
-    &.booksPage {
-      &:not(.textOnly) {
-        background-size: contain;
-        height: 30vh;
-        margin-bottom: 20px;
-        background-position-x: center;
-      }
-    }
   }
   background-repeat: no-repeat;
   color: #333;
@@ -23,8 +15,17 @@
   display: flex;
   background-size: cover;
   background-position-y: center;
-
-  /* === */
+  justify-content: flex-end;
+  transition: background-position-x 0.5s, opacity 1s;
+  @media (max-width: 455px) {
+    height: 70vh;
+  }
+  &:first-child {
+    background-position-x: 100%;
+  }
+  &:last-child {
+    background-position-x: 0;
+  }
   &.mainScreen-appear {
     opacity: 0.01;
     > .h3 {
@@ -38,34 +39,12 @@
     }
   }
   &.mainScreen-appear.mainScreen-appear-active {
-    transition: background-position-x 0.8s, opacity 1s;
     opacity: 1;
-    &:first-child {
-      &:not(.booksPage) {
-        background-position-x: 100%;
-      }
-    }
-    &:last-child {
-      &:not(.booksPage) {
-        background-position-x: 0;
-      }
-    }
-    > .h3 {
+
+    .h3 {
       transition: opacity 1.9s;
       opacity: 1;
     }
-  }
-  &:not(.booksPage) {
-    &:first-child {
-      background-position-x: 100%;
-    }
-    &:last-child {
-      background-position-x: 0;
-    }
-  }
-  justify-content: flex-end;
-  @media (max-width: 455px) {
-    height: 70vh;
   }
   p.h3 {
     color: #fff;
@@ -229,6 +208,24 @@
       img {
         max-width: 100%;
       }
+    }
+  }
+}
+.booksPage {
+  .halfScreenBlock {
+    order: 1;
+    margin: 0 auto;
+    background-position-y: top;
+    &:not(.textOnly) {
+      background-size: contain;
+      height: 30vh;
+      margin-bottom: 20px;
+      background-position-x: center;
+    }
+  }
+  &.mobileView {
+    .halfScreenBlock {
+      width: 100vw;
     }
   }
 }

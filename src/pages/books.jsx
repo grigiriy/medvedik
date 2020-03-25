@@ -15,7 +15,7 @@ class Books extends Component {
       <Layout mobile={this.state.mobile}>
         <MainScreen
           content={Content.About}
-          mobile={true}
+          mobile={this.state.mobile}
           classNames="booksPage"
         />
         <BookList content={Content.Books} />

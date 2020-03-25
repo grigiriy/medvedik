@@ -9,19 +9,18 @@ class MainScreen extends Component {
     const { left, right } = this.props.content;
 
     let classList = this.props.mobile ? 'mainBlock mobileView ' : 'mainBlock ';
-
+    classList += this.props.classNames ? this.props.classNames : '';
     return (
       <ReactCSSTransitionGroup
         transitionName="mainScreen"
         transitionAppear={true}
-        transitionAppearTimeout={1200}
+        transitionAppearTimeout={600}
         transitionEnter={false}
         transitionLeave={false}
         component="section"
         className={classList}
       >
         <HalfSideBlock
-          classNames={this.classNames}
           side={left}
           mobile={this.props.mobile ? this.props.mobile : false}
           orderDetails={this.props.orderDetails}
@@ -30,7 +29,6 @@ class MainScreen extends Component {
         <HalfSideBlock
           orderDetails={this.props.orderDetails}
           updateOrderDetails={this.props.updateOrderDetails}
-          classNames={this.props.classNames}
           side={right}
           mobile={this.props.mobile ? this.props.mobile : false}
         />

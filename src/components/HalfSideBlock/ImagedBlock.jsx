@@ -2,10 +2,8 @@ import React from 'react';
 
 function ImagedBlock(props) {
   const { imageSrc, headLine } = props.side;
-  const { classNames } = props;
   const { mobile } = props;
-  let classList = mobile ? 'halfScreenBlock mobileView' : 'halfScreenBlock';
-  classList = classNames ? classList + classNames : classList;
+  let classList = mobile ? 'halfScreenBlock mobileView ' : 'halfScreenBlock ';
   return (
     <div
       className={classList}

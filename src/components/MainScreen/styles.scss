@@ -1,6 +1,7 @@
 .mainBlock {
   display: flex;
-  &.mobileView {
+  &.mobileView,
+  &.booksPage {
     flex-direction: column;
   }
 }
