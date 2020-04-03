@@ -14,7 +14,8 @@ class Order extends Component {
       price: 1900,
       type: 'shirt',
       color: ['white', 'white'],
-      size: null
+      size: null,
+      image_url: require(`../images/heart_logo.png`)
     }
   };
 

@@ -39,7 +39,7 @@ class ConstructorBlock extends Component {
             <div
               className="draggable"
               style={{
-                backgroundImage: `url(${require(`../../../images/heart_logo.png`)})`
+                backgroundImage: `url(${this.props.orderDetails.image_url})`
               }}
             >
               <ResizableBox

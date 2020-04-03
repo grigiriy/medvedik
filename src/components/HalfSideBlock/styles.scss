@@ -26,26 +26,6 @@
   &:last-child {
     background-position-x: 0;
   }
-  &.mainScreen-appear {
-    opacity: 0.01;
-    > .h3 {
-      opacity: 0.01;
-    }
-    &:first-child {
-      background-position-x: -50vw;
-    }
-    &:last-child {
-      background-position-x: 50vw;
-    }
-  }
-  &.mainScreen-appear.mainScreen-appear-active {
-    opacity: 1;
-
-    .h3 {
-      transition: opacity 1.9s;
-      opacity: 1;
-    }
-  }
   p.h3 {
     color: #fff;
     font-family: 'Lobster', cursive;
@@ -227,5 +207,22 @@
     .halfScreenBlock {
       width: 100vw;
     }
+  }
+}
+
+.mobileView {
+  &.mainScreen-appear.mainScreen-appear-active {
+    .halfScreenBlock {
+      &:first-child {
+        background-position-x: 100%;
+      }
+      &:last-child {
+        background-position-x: 50vw;
+      }
+    }
+  }
+  &.mainScreen-appear {
+    background-position-x: -200%;
+    opacity: 0.5;
   }
 }

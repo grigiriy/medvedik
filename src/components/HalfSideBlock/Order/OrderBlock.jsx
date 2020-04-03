@@ -11,7 +11,7 @@ import Content from '../../../assets/db/availible.js';
 class OrderBlock extends Component {
   render() {
     const { text } = this.props.side;
-    let { type, price } = this.props.orderDetails;
+    let { type, price, image_url } = this.props.orderDetails;
 
     let sizes = Content[type]['sizes'];
     let colors = Content[type]['colors'];
@@ -36,7 +36,12 @@ class OrderBlock extends Component {
           />
         </p>
 
-        <UploadForm text={text} type={type} />
+        <UploadForm
+          text={text}
+          type={type}
+          updateOrderDetails={this.props.updateOrderDetails}
+          image_url={image_url}
+        />
 
         <PriceForm price={price} />
 
