@@ -5,7 +5,7 @@ import BookList from '../components/BookList';
 import Layout from '../components/Layout';
 
 import Content from '../assets/db/books.js';
-const cw = window.innerWidth;
+const cw = typeof window !== 'undefined' ? window.innerWidth : null;
 class Books extends Component {
   state = {
     mobile: cw < 768 ? true : false

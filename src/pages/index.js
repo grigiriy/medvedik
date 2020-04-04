@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 
 import Content from '../assets/db/mainScreen.js';
 
-const cw = window.innerWidth;
+const cw = typeof window !== 'undefined' ? window.innerWidth : null;
 class IndexPage extends Component {
   state = {
     mobile: cw < 768 ? true : false

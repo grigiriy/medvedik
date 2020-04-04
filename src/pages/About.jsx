@@ -5,7 +5,8 @@ import Contacts from '../components/Contacts';
 import Layout from '../components/Layout';
 
 import Content from '../assets/db/about.js';
-const cw = window.innerWidth;
+
+const cw = typeof window !== 'undefined' ? window.innerWidth : null;
 class About extends Component {
   state = {
     mobile: cw < 768 ? true : false

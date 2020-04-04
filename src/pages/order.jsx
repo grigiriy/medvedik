@@ -6,7 +6,7 @@ import MainScreen from '../components/MainScreen';
 
 import Content from '../assets/db/order.js';
 import Availible from '../assets/db/availible.js';
-const cw = window.innerWidth;
+const cw = typeof window !== 'undefined' ? window.innerWidth : null;
 class Order extends Component {
   state = {
     mobile: cw < 768 ? true : false,
