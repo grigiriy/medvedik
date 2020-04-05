@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
-import './styles.scss';
+import './module.PromoCard.scss';
 
 class PromoCard extends Component {
   render() {
@@ -11,7 +11,7 @@ class PromoCard extends Component {
       return (
         <div className="col center d-flex">
           <ul>
-            {headLine.map(item => {
+            {headLine.map((item) => {
               return (
                 <li key={item[1]}>
                   <Link to={item[1]}>{item[0]}</Link>
@@ -32,7 +32,7 @@ class PromoCard extends Component {
           to={link}
           className="col side"
           style={{
-            backgroundImage: `url(${require('../../images/' + imageSrc)})`
+            backgroundImage: `url(${require('../../images/' + imageSrc)})`,
           }}
         >
           <div>

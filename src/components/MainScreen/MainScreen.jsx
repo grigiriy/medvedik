@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HalfSideBlock from '../HalfSideBlock';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import './styles.scss';
+import './module.MainScreen.scss';
 
 class MainScreen extends Component {
   render() {

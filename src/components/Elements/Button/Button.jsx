@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.scss';
+import './module.Button.scss';
 
 function Button(props) {
   let { children, classList } = props;

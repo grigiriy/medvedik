@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../../components/Elements/Button';
 
-import './styles.scss';
+import './module.BookCard.scss';
 class BookCard extends Component {
   render() {
     const { text, headLine, imageSrc, linkTo } = this.props.content;

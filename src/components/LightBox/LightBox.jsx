@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './styles.scss';
+import './module.LightBox.scss';
 
 class LightBox extends Component {
   clickDetect = (e, bool) => {
@@ -27,7 +27,7 @@ class LightBox extends Component {
       return (
         <div
           className={classList}
-          onClick={e =>
+          onClick={(e) =>
             this.props.initLightBox(
               this.clickDetect(e.target),
               this.props.LbContent

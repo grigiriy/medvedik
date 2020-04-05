@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import './styles.scss';
+import './module.Header.scss';
 
 import Content from '../../assets/db/navMenu.js';
 import Contacts from '../../assets/db/about.js';
 
 class Header extends Component {
   state = {
-    open: false
+    open: false,
   };
 
-  toggleBurger = e => {
+  toggleBurger = (e) => {
     this.setState({
-      open: e
+      open: e,
     });
   };
 
@@ -31,7 +31,7 @@ class Header extends Component {
         className={this.state.open ? 'active' : ''}
       >
         <ul className="topMenu">
-          {Content.items.map(item => (
+          {Content.items.map((item) => (
             <li key={item.link}>
               {item.link === null ? (
                 <hr />
@@ -81,7 +81,7 @@ class Header extends Component {
           className="headerBack"
           style={{
             backgroundImage: `url(${require('../../images/' +
-              'MariaMedvedik.png')})`
+              'MariaMedvedik.png')})`,
           }}
         ></div>
       </ReactCSSTransitionGroup>

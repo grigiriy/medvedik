@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
-import './styles.scss';
+import './module.ProductCard.scss';
 
 import Content from '../../assets/db/catalogMenu.js';
 
@@ -10,7 +10,7 @@ class ProductCard extends Component {
     return (
       <div className="container">
         <ul className="catalog-menu">
-          {Content.items.map(item => (
+          {Content.items.map((item) => (
             <li key={item.link}>
               <Link to={`/shop/${item.link}`}>{item.name}</Link>
             </li>

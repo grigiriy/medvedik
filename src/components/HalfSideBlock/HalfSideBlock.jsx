@@ -6,7 +6,7 @@ import ImagedBlock from './ImagedBlock.jsx';
 import OrderBlock from './Order/OrderBlock.jsx';
 import ConstructorBlock from './Order/ConstructorBlock.jsx';
 
-import './styles.scss';
+import './module.HalfSideBlock.scss';
 
 class HalfSideBlock extends Component {
   render() {

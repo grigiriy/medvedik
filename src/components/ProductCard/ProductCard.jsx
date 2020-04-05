@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
-import './styles.scss';
+import './module.ProductCard.scss';
 class ProductCard extends Component {
   render() {
     const { name, price, imageSrc, slug } = this.props.content;

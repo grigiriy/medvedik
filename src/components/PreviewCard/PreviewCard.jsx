@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './styles.scss';
+import './module.PreviewCard.scss';
 
 class PreviewCard extends Component {
   state = {
-    atts: false
+    atts: false,
   };
 
   // setContent = (imageSrc, description, name) => {
@@ -16,9 +16,9 @@ class PreviewCard extends Component {
   //   this.props.initLightBox(!this.props.lightBox, content);
   // };
 
-  toggleDescription = e => {
+  toggleDescription = (e) => {
     this.setState({
-      atts: e
+      atts: e,
     });
   };
 
@@ -46,7 +46,7 @@ class PreviewCard extends Component {
             this.toggleDescription(false);
           }
         }}
-        onClick={e => {
+        onClick={(e) => {
           if (mobile) {
             this.toggleDescription(!this.state.atts);
           }

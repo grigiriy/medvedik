@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
-import './styles.scss';
+import './module.Footer.scss';
 
 import Content from '../../assets/db/navMenu.js';
 
@@ -12,7 +12,7 @@ class Footer extends Component {
         <footer>
           <ul className="botMenu">
             <li key="copyright">© Maria Medvedik 2020</li>
-            {Content.items.map(item => {
+            {Content.items.map((item) => {
               if (item.inFooter)
                 return (
                   <li key={item.link}>
