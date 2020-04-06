@@ -3,10 +3,10 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 7vw;
+    height: 70px;
     .headerBack {
-      height: 7vh;
-      margin-top: -7vh;
+      height: 70px;
+      margin-top: -70px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position-x: 100%;
@@ -18,7 +18,7 @@ header {
       padding-left: 0;
       margin: 0;
       justify-content: space-between;
-      line-height: 7vw;
+      line-height: 70px;
       position: relative;
       z-index: 1;
       .igSvg {
@@ -57,15 +57,18 @@ header {
     display: flex;
     z-index: 100;
     position: fixed;
-    background: #fff;
+    // background: #fff;
+    // background: #fd5595bb;
+    background: linear-gradient(120deg, #e374c0 0%, #53f4f1 100%);
     min-width: calc(200px + 100vw);
     .headerBack {
-      height: 40px;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 100%;
-      margin-left: -60px;
+      width: calc(100vw - 60px);
+      height: auto;
+      line-height: 40px;
       z-index: 1;
+      background-position-y: center;
     }
     #burger {
       display: flex;
@@ -79,9 +82,9 @@ header {
       span {
         border-radius: 7px;
         height: 7px;
-        margin: 2px;
+        margin: 2.5px;
         width: 100%;
-        background: #ea85bf;
+        background: #fff;
         transition: all 0.2s;
       }
     }
@@ -92,9 +95,13 @@ header {
       margin-top: 0;
       padding: 20px;
       z-index: 100;
-      background: #ffc7ed;
-      background: linear-gradient(120deg, #ffc7ed 0%, #a0fffd 100%);
+      background: #e374c0;
+      background: linear-gradient(120deg, #e374c0 0%, #53f4f1 100%);
       height: calc(100vh - 40px);
+      a,
+      hr {
+        color: #fff;
+      }
       .credits {
         font-size: 0.7em;
       }
@@ -121,7 +128,7 @@ header {
           height: inherit;
           height: 6px;
           transform: rotate(-45deg);
-          top: -8px;
+          top: -9px;
         }
       }
     }
