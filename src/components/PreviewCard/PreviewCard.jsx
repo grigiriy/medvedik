@@ -7,15 +7,6 @@ class PreviewCard extends Component {
     atts: false,
   };
 
-  // setContent = (imageSrc, description, name) => {
-  //   let content = {
-  //     img: imageSrc,
-  //     text: description,
-  //     name: name
-  //   };
-  //   this.props.initLightBox(!this.props.lightBox, content);
-  // };
-
   toggleDescription = (e) => {
     this.setState({
       atts: e,
@@ -49,6 +40,15 @@ class PreviewCard extends Component {
         onClick={(e) => {
           if (mobile) {
             this.toggleDescription(!this.state.atts);
+          } else {
+            this.props.initLightBox(
+              {
+                name: name,
+                description: description,
+                imageSrc: imageSrc,
+              },
+              true
+            );
           }
         }}
       >

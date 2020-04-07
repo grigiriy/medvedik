@@ -17,7 +17,7 @@ class LightBox extends Component {
 
   render() {
     let isOpen = this.props.lightBox;
-    let { img, text, name } = this.props.LbContent;
+    let { imageSrc, description, name } = this.props.LbContent;
     let classList = 'lightBoxBG';
     if (isOpen) {
       classList += ' shown';
@@ -28,18 +28,15 @@ class LightBox extends Component {
         <div
           className={classList}
           onClick={(e) =>
-            this.props.initLightBox(
-              this.clickDetect(e.target),
-              this.props.LbContent
-            )
+            this.props.initLightBox(this.clickDetect(e.target), false)
           }
         >
           <div className="lightBoxWrap">
             <div className="lightBoxContent">
-              <img src={require('../../images/' + img)} alt="" />
+              <img src={require('../../images/' + imageSrc)} alt="" />
               <div class="attributes">
                 <p>{name}</p>
-                <p>{text}</p>
+                <p>{description}</p>
               </div>
             </div>
           </div>

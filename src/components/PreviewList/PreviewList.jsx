@@ -13,6 +13,7 @@ class PreviewList extends Component {
             content={Content[item]}
             key={Content[item].id}
             mobile={this.props.mobile}
+            initLightBox={this.props.initLightBox}
           />
         ))}
       </div>
