@@ -15,7 +15,7 @@ class PreviewCard extends Component {
 
   render() {
     let { name, description, imageSrc } = this.props.content;
-    const { mobile } = this.props.mobile;
+    const { mobile } = this.props;
 
     let detailClassList = 'detail';
     const { atts } = this.state;
