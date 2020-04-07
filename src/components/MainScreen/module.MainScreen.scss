@@ -6,3 +6,25 @@
     flex-direction: column;
   }
 }
+.mainScreen-appear {
+  opacity: 0.01;
+  &.halfScreenBlock:first-child {
+    background-position-x: -150vw;
+  }
+  &.halfScreenBlock:last-child {
+    background-position-x: 100vw;
+  }
+}
+.mainScreen-appear.mainScreen-appear-active {
+  transition: background-position 1s ease, opacity 2s ease-out;
+  opacity: 1;
+  &.halfScreenBlock {
+    opacity: 1;
+    &:first-child {
+      background-position-x: 100%;
+    }
+    &:last-child {
+      background-position-x: 0;
+    }
+  }
+}
