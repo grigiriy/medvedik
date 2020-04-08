@@ -36,7 +36,7 @@ class IndexPage extends Component {
     return (
       <Layout mobile={this.state.mobile}>
         <MainScreen content={Content} />
-        {/* <PromoList /> */}
+        <PromoList />
         <PreviewList
           mobile={this.state.mobile}
           initLightBox={this.initLightBox}

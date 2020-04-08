@@ -96,13 +96,18 @@
       }
 
       @media (max-width: 1024px) {
+        max-width: 768px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         margin: 20px auto;
         padding: 0;
         li {
-          margin: 5px 10px;
+          margin: 0 10px;
+          display: flex;
+          a {
+            font-size: 0.7em;
+          }
         }
       }
     }
@@ -126,7 +131,7 @@
     }
     @media (max-width: 455px) {
       width: 100%;
-      margin: 0;
+      margin: 0 0 10px;
     }
   }
 }

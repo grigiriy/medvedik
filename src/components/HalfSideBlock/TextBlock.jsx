@@ -2,13 +2,12 @@ import React from 'react';
 
 function TextBlock(props) {
   const { text, headLine } = props.side;
+  const { classNames } = props;
   const { mobile } = props;
-  let classList = mobile
-    ? 'halfScreenBlock textOnly mobileView'
-    : 'halfScreenBlock textOnly';
+  let classList = mobile ? 'textOnly mobileView' : 'textOnly';
 
   return (
-    <div className={classList}>
+    <div className={classList + ' ' + classNames}>
       <p className="h4">{headLine}</p>
       <p>{text}</p>
     </div>

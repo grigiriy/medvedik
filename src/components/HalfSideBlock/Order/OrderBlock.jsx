@@ -6,7 +6,7 @@ import UploadForm from '../Elements/UploadForm';
 import SelectAttForm from '../Elements/SelectAttForm';
 import PriceForm from '../Elements/PriceForm';
 
-import Content from '../../../assets/db/availible.js';
+import Content from '../../../assets/db/available.js';
 
 class OrderBlock extends Component {
   render() {

@@ -46,7 +46,7 @@ class HalfSideBlock extends Component {
     return (
       <TextBlock
         side={this.props.side}
-        classNames={this.props.classNames}
+        classNames={this.props.classNames + ' halfScreenBlock'}
         mobile={this.props.mobile}
       />
     );

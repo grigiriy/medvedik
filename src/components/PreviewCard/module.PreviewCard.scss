@@ -1,23 +1,25 @@
 .columns {
   &.container {
     display: block;
+    margin: 0 auto;
   }
-  column-gap: 20px;
+  column-gap: 10px;
   column-count: 3;
   @media (max-width: 768px) {
     column-count: 2;
-  }
-  @media (max-width: 455px) {
-    column-count: 1;
+    font-size: 0.6em;
   }
   .preview {
-    margin: 0 0 20px 0;
+    break-inside: avoid;
+    display: block;
+    padding: 0 0 10px 0;
     display: flex;
     flex-direction: column;
     position: relative;
     cursor: pointer;
     .detail.withAtts {
       opacity: 1;
+      padding-bottom: 15px;
     }
     img {
       max-width: 100%;
@@ -30,6 +32,7 @@
       bottom: 0;
       color: #fff;
       opacity: 0;
+      margin-bottom: 10px;
       p {
         margin: 0;
         font-size: 1.5em;
