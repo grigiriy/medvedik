@@ -38,18 +38,18 @@ class PreviewCard extends Component {
           }
         }}
         onClick={(e) => {
-          if (mobile) {
-            this.toggleDescription(!this.state.atts);
-          } else {
-            this.props.initLightBox(
-              {
-                name: name,
-                description: description,
-                imageSrc: imageSrc,
-              },
-              true
-            );
-          }
+          // if (mobile) {
+          //   this.toggleDescription(!this.state.atts);
+          // } else {
+          this.props.initLightBox(
+            {
+              name: name,
+              description: description,
+              imageSrc: imageSrc,
+            },
+            true
+          );
+          // }
         }}
       >
         <img src={require('../../images/' + imageSrc)} alt="" />

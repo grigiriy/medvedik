@@ -1,49 +1,78 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './module.LightBox.scss';
 
+const cw = typeof window !== 'undefined' ? window.innerWidth : null;
+
 class LightBox extends Component {
-  clickDetect = (e, bool) => {
+  state = {
+    isMobile: cw < 768 ? true : false,
+    isTab: cw < 1024 && cw >= 768 ? true : false,
+    showAtts: false,
+  };
+
+  toggleAtts = (e) => {
+    this.setState({
+      showAtts: e,
+    });
+  };
+
+  clickDetect = (e) => {
+    console.log(e);
     if (
       e.classList.contains('lightBoxContent') ||
       e.parentElement.classList.contains('lightBoxContent') ||
       e.parentElement.classList.contains('attributes')
     ) {
-      return !bool;
+      this.toggleAtts(!this.state.showAtts);
+      return true;
     } else {
-      return bool;
+      this.toggleAtts(false);
+      this.props.initLightBox('', false);
+      return false;
     }
   };
 
   render() {
-    let isOpen = this.props.lightBox;
-    let { imageSrc, description, name } = this.props.LbContent;
     let classList = 'lightBoxBG';
-    if (isOpen) {
-      classList += ' shown';
+
+    let d_classList = 'attributes';
+    if (this.state.showAtts) {
+      d_classList += ' withAtts';
     }
 
-    if (isOpen) {
+    const LB = (props) => {
+      let { imageSrc, description, name } = props.LbContent;
       return (
-        <div
-          className={classList}
-          onClick={(e) =>
-            this.props.initLightBox(this.clickDetect(e.target), false)
-          }
-        >
-          <div className="lightBoxWrap">
-            <div className="lightBoxContent">
-              <img src={require('../../images/' + imageSrc)} alt="" />
-              <div class="attributes">
-                <p>{name}</p>
-                <p>{description}</p>
-              </div>
+        <div className="lightBoxWrap">
+          <div className="lightBoxContent">
+            <img src={require('../../images/' + imageSrc)} alt="" />
+            <div id="huy" className={d_classList}>
+              <p>{name}</p>
+              <p>{description}</p>
             </div>
           </div>
         </div>
       );
+    };
+    if (this.props.lightBox === true) {
+      return (
+        <ReactCSSTransitionGroup
+          transitionName="LightBox"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionLeaveTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={true}
+          className={classList}
+          onClick={(e) => this.clickDetect(e.target)}
+        >
+          <LB d_classList="attributes" LbContent={this.props.LbContent} />
+        </ReactCSSTransitionGroup>
+      );
     } else {
-      return <div></div>;
+      return '';
     }
   }
 }

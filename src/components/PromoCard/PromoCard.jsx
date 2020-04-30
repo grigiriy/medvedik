@@ -14,7 +14,8 @@ class PromoCard extends Component {
             {headLine.map((item) => {
               return (
                 <li key={item[1]}>
-                  <Link to={item[1]}>{item[0]}</Link>
+                  {/* <Link to={item[1]}>{item[0]}</Link> */}
+                  {item[0]}
                 </li>
               );
             })}

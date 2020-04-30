@@ -5,10 +5,13 @@
   height: 100vh;
   z-index: 2;
   top: 0;
-  display: none;
-  &.shown {
-    display: block;
-  }
+  // display: none;
+  // opacity: 0;
+  // transition: all 0.2s;
+  // &.shown {
+  //   display: block;
+  //   opacity: 1;
+  // }
   .lightBoxWrap {
     display: flex;
     // max-width: 800px;
@@ -19,8 +22,17 @@
     justify-content: center;
     .lightBoxContent {
       position: relative;
+      max-width: 90vw;
       img {
         max-height: calc(100vh - 150px);
+        max-width: 90vw;
+      }
+      @media (max-width: 1024px) {
+        margin: 20px;
+        max-width: none;
+        img {
+          max-width: calc(100vw - 20px);
+        }
       }
       .attributes {
         transition: all 0.5s;
@@ -39,12 +51,29 @@
         p + p {
           font-size: 1.2em;
         }
-      }
-      &:hover {
-        .attributes {
+        @media (max-width: 768px) {
+          padding: 10px 10px 15px;
+          p {
+            font-size: 1.2em;
+            margin: 0;
+          }
+          p + p {
+            font-size: 1em;
+          }
+        }
+        &.withAtts {
           opacity: 1;
         }
       }
     }
   }
+}
+
+.LightBox-appear,
+.LightBox-leave {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-out;
+}
+.LightBox-appear.LightBox-appear-active {
+  opacity: 1;
 }

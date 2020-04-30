@@ -6,7 +6,8 @@
     flex-direction: column;
   }
 }
-.mainScreen-appear {
+.mainScreen-appear,
+.mainScreen-onLeave {
   opacity: 0.01;
   &.halfScreenBlock:first-child {
     background-position-x: -150vw;
