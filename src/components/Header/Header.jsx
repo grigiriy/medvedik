@@ -50,7 +50,7 @@ class Header extends Component {
             </a>
           </li>
 
-          {this.props.mobile && (
+          {/* {this.props.mobile && (
             <>
               <hr />
               <li key="phone" className="credits">
@@ -62,7 +62,7 @@ class Header extends Component {
                 <a href={`mailto:${credits.email}`}>{credits.email}</a>
               </li>
             </>
-          )}
+          )} */}
         </ul>
         {this.props.mobile && (
           <div

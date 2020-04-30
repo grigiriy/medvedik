@@ -34,6 +34,10 @@ header {
       }
       & > li {
         width: auto;
+        margin: 0 20px;
+        &:nth-child(3) {
+          margin-right: auto;
+        }
         a {
           text-decoration: none;
           color: inherit;
