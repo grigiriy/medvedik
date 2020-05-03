@@ -7,6 +7,7 @@ class ConstructorBlock extends Component {
   render() {
     const types = ['shirt', 'sweetshirt', 'hoodie'];
     const { mobile } = this.props;
+    const defPos = { x: 150, y: -400 };
     let classList = mobile
       ? 'halfScreenBlock mobileView constructor_form'
       : 'constructor_form halfScreenBlock';
@@ -16,7 +17,7 @@ class ConstructorBlock extends Component {
         <div
           className="main_image"
           style={{
-            backgroundImage: `url(${require(`../../../images/${this.props.orderDetails.type}_${this.props.orderDetails.color[0]}.png`)})`
+            backgroundImage: `url(${require(`../../../images/${this.props.orderDetails.type}_${this.props.orderDetails.color[0]}.png`)})`,
           }}
         >
           <img
@@ -26,7 +27,7 @@ class ConstructorBlock extends Component {
 
           <Draggable
             handle=".draggable"
-            defaultPosition={{ x: 350, y: -400 }}
+            defaultPosition={defPos}
             // position={null}
             // grid={[25, 25]}
             scale={1}
@@ -39,7 +40,7 @@ class ConstructorBlock extends Component {
             <div
               className="draggable"
               style={{
-                backgroundImage: `url(${this.props.orderDetails.image_url})`
+                backgroundImage: `url(${this.props.orderDetails.image_url})`,
               }}
             >
               <ResizableBox
@@ -52,12 +53,12 @@ class ConstructorBlock extends Component {
           </Draggable>
         </div>
         <div className="constructor_types">
-          {types.map(item => (
+          {types.map((item) => (
             <div key={item} className="card">
               <img
                 src={require(`../../../images/${item}_${this.props.orderDetails.color[0]}.png`)}
                 alt={item}
-                onClick={e => {
+                onClick={(e) => {
                   this.props.updateOrderDetails('type', item);
                 }}
               />

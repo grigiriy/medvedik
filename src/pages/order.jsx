@@ -6,18 +6,28 @@ import MainScreen from '../components/MainScreen';
 
 import Content from '../assets/db/order.js';
 import Available from '../assets/db/available.js';
-const cw = typeof window !== 'undefined' ? window.innerWidth : null;
+const cw =
+  typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
 class Order extends Component {
   state = {
-    mobile: cw < 768 ? true : false,
+    mobile: false,
     orderDetails: {
-      price: 1900,
+      price: 2200,
       type: 'shirt',
       color: ['white', 'white'],
-      size: null,
+      size: 's',
       image_url: require(`../images/heart_logo.png`),
+      textName: 'футболку',
     },
   };
+
+  if_mobile = ($cw) => {
+    this.setState({ mobile: $cw < 992 ? true : false });
+  };
+
+  componentDidMount() {
+    this.if_mobile(cw);
+  }
 
   updateOrderDetails = ($type, $value) => {
     if ($type === 'type') {
@@ -34,6 +44,7 @@ class Order extends Component {
         ...this.state.orderDetails,
         price: $price,
         [$type]: $value,
+        // textName: Content.$type.textName,
       },
     });
   };
@@ -63,6 +74,7 @@ class Order extends Component {
 
     let cur_stock = Available[$value];
     console.log(Available);
+
     //color
     if (
       cur_stock.colors

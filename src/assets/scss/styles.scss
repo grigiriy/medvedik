@@ -9,6 +9,12 @@
   font-family: 'Oswald';
   font-size: 1em;
 }
+
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 p {
   font: 1.5em / 1.5em 'Alice';
   &[class^='h'] {
@@ -60,6 +66,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: calc(100% - 40px);
   &.fluid {
     max-width: none;
   }
@@ -68,13 +75,16 @@ ul {
   }
   @media (max-width: 455px) {
     padding: 0 10px;
+    width: calc(100% - 20px);
   }
 }
 .no-wrap {
   flex-wrap: nowrap;
 }
 /////// draggable/resizable
-
+.mb-5 {
+  margin-bottom: 5rem;
+}
 .react-resizable {
   position: relative;
   cursor: move; /* fallback if grab cursor is unsupported */

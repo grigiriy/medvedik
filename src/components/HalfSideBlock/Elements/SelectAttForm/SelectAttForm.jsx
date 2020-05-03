@@ -6,11 +6,11 @@ function SelectAttForm(props) {
       <span className="grouped" id={props.type}>
         {props.atts.map((item, index) => (
           <span
-            className={props.classList}
+            className={index === 0 ? 'chosen' : ''}
             key={item}
-            onClick={e => {
+            onClick={(e) => {
               props.updateOrderDetails(props.type, item);
-              e.target.parentNode.querySelectorAll('span').forEach(e => {
+              e.target.parentNode.querySelectorAll('span').forEach((e) => {
                 e.classList.remove('chosen');
               });
               e.target.classList.add('chosen');
@@ -27,13 +27,17 @@ function SelectAttForm(props) {
         {props.atts.map((item, index) => (
           <span
             style={{
-              backgroundColor: `${item[1]}`
+              backgroundColor: `${item[1]}`,
             }}
-            className={props.classList + ' colorItem ' + item[0]}
             key={item}
-            onClick={e => {
+            className={
+              index === 0
+                ? 'chosen colorItem ' + item[0]
+                : 'colorItem ' + item[0]
+            }
+            onClick={(e) => {
               props.updateOrderDetails(props.type, item);
-              e.target.parentNode.querySelectorAll('span').forEach(e => {
+              e.target.parentNode.querySelectorAll('span').forEach((e) => {
                 e.classList.remove('chosen');
               });
               e.target.classList.add('chosen');

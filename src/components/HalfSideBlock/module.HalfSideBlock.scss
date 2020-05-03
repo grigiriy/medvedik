@@ -181,11 +181,20 @@
 .constructor_form {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+    height: auto;
+  }
   .main_image {
     text-align: center;
     background-repeat: no-repeat;
     background-position-x: center;
     position: relative;
+    @media (max-width: 768px) {
+      background-size: contain;
+    }
     > img {
       visibility: hidden;
     }
