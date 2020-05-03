@@ -8,13 +8,22 @@ import LightBox from '../components/LightBox';
 
 import Content from '../assets/db/mainScreen.js';
 
-const cw = typeof window !== 'undefined' ? window.innerWidth : null;
+const cw =
+  typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
 class IndexPage extends Component {
   state = {
-    mobile: cw < 768 ? true : false,
+    mobile: false,
     isLightBox: false,
     content: '',
   };
+
+  if_mobile = ($cw) => {
+    this.setState({ mobile: $cw < 992 ? true : false });
+  };
+
+  componentDidMount() {
+    this.if_mobile(cw);
+  }
 
   initLightBox = (e, bool) => {
     if (!bool) {
@@ -28,7 +37,6 @@ class IndexPage extends Component {
   };
 
   fillLB = (e) => {
-    // console.log(e);
     console.log('state', this.state.content);
   };
 
@@ -36,7 +44,7 @@ class IndexPage extends Component {
     return (
       <Layout mobile={this.state.mobile}>
         <MainScreen content={Content} />
-        <PromoList />
+        {/* <PromoList /> */}
         <PreviewList
           mobile={this.state.mobile}
           initLightBox={this.initLightBox}
