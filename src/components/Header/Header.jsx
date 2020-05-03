@@ -41,7 +41,10 @@ class Header extends Component {
             </li>
           ))}
           <li key="ig" className="igSvg">
-            <a href={`https://www.instagram.com/${credits.inst}`}>
+            <a
+              href={`https://www.instagram.com/${credits.inst}`}
+              target="_blank"
+            >
               {this.props.mobile ? (
                 <span className="credits">@{credits.inst}</span>
               ) : (
@@ -76,7 +79,6 @@ class Header extends Component {
             <span></span>
           </div>
         )}
-        {/* <h1 className="headerBack">Maria Medvedik</h1> */}
         <div
           className="headerBack"
           style={{
