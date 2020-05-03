@@ -104,10 +104,9 @@
         padding: 0;
         li {
           margin: 0 10px;
-          display: flex;
-          a {
-            font-size: 0.7em;
-          }
+          width: 100%;
+          text-align: center;
+          font-size: 0.7em;
         }
       }
     }

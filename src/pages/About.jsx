@@ -6,11 +6,21 @@ import Layout from '../components/Layout';
 
 import Content from '../assets/db/about.js';
 
-const cw = typeof window !== 'undefined' ? window.innerWidth : null;
+const cw =
+  typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
 class About extends Component {
   state = {
-    mobile: cw < 768 ? true : false
+    mobile: false,
   };
+
+  if_mobile = ($cw) => {
+    this.setState({ mobile: $cw < 992 ? true : false });
+  };
+
+  componentDidMount() {
+    this.if_mobile(cw);
+  }
+
   render() {
     return (
       <Layout mobile={this.state.mobile}>

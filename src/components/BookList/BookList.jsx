@@ -6,7 +6,7 @@ class BookList extends Component {
   render() {
     const { content } = this.props;
     return (
-      <div className="container">
+      <div className="mb-5">
         {Object.keys(content).map((item, index) => (
           <BookCard content={content[item]} key={content[item].headLine} />
         ))}
@@ -14,5 +14,4 @@ class BookList extends Component {
     );
   }
 }
-
 export default BookList;
