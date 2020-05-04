@@ -47,8 +47,8 @@ class LightBox extends Component {
       return (
         <div className="lightBoxWrap">
           <div className="lightBoxContent">
-            <img src={require('../../images/' + imageSrc)} alt="" />
-            <div id="huy" className={d_classList}>
+            <img src={imageSrc} alt="" />
+            <div className={d_classList}>
               <p>{name}</p>
               <p>{description}</p>
             </div>

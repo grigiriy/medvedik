@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './module.PreviewCard.scss';
 
+import Img from 'gatsby-image';
+
 class PreviewCard extends Component {
   state = {
     atts: false,
@@ -14,7 +16,7 @@ class PreviewCard extends Component {
   };
 
   render() {
-    let { name, description, imageSrc } = this.props.content;
+    let { name, description } = this.props.content;
     const { mobile } = this.props;
 
     let detailClassList = 'detail';
@@ -24,6 +26,7 @@ class PreviewCard extends Component {
       detailClassList += ' withAtts';
     }
 
+    // console.log(this.props.image.srcSet.split(','));
     return (
       <div
         className="preview"
@@ -38,21 +41,17 @@ class PreviewCard extends Component {
           }
         }}
         onClick={(e) => {
-          // if (mobile) {
-          //   this.toggleDescription(!this.state.atts);
-          // } else {
           this.props.initLightBox(
             {
               name: name,
               description: description,
-              imageSrc: imageSrc,
+              imageSrc: this.props.image.src,
             },
             true
           );
-          // }
         }}
       >
-        <img src={require('../../images/' + imageSrc)} alt="" />
+        <Img fluid={this.props.image} alt={name} />
         <div className={detailClassList}>
           <p>{name}</p>
           <p>{description}</p>
