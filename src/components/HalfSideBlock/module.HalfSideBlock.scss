@@ -217,7 +217,7 @@
 }
 
 .mobileView {
-  &.mainScreen-appear.mainScreen-appear-active {
+  &.mainScreen-enter.mainScreen-appear-active {
     .halfScreenBlock {
       &:first-child {
         background-position-x: 100%;

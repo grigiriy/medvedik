@@ -14,8 +14,7 @@ class MainScreen extends Component {
       <ReactCSSTransitionGroup
         transitionName="mainScreen"
         transitionAppear={true}
-        transitionAppearTimeout={2000}
-        transitionEnter={false}
+        transitionAppearimeout={0}
         transitionLeave={false}
         component="section"
         className={classList}

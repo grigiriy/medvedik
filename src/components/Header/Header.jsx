@@ -18,13 +18,21 @@ class Header extends Component {
     });
   };
 
+  componentDidMount() {
+    if (typeof window === 'undefined' || !window.document) {
+      console.log('...');
+    } else {
+      document.querySelector('body').classList.add('d-block');
+    }
+  }
+
   render() {
     let { credits } = Contacts;
     return (
       <ReactCSSTransitionGroup
         transitionName="header"
         transitionAppear={true}
-        transitionAppearTimeout={800}
+        transitionAppearTimeout={0}
         transitionEnter={false}
         transitionLeave={false}
         component="header"
