@@ -17,6 +17,11 @@
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    @media (max-width: 768px) {
+      .gatsby-image-wrapper {
+        overflow: visible !important;
+      }
+    }
     .detail.withAtts {
       opacity: 1;
       padding-bottom: 15px;
