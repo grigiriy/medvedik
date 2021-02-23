@@ -13,12 +13,12 @@ class Footer extends Component {
           <ul className="botMenu">
             <li key="by">
               by
-              <a href="https://grigiriy.ru" target="_blank">
+              <a href="https://webique.ru" target="_blank">
                 {' '}
-                @grigiriy
+                Webique
               </a>
             </li>
-            <li key="copyright">© Maria Medvedik 2020</li>
+            <li key="copyright">© Maria Medvedik 2021</li>
             {Content.items.map((item) => {
               if (item.inFooter)
                 return (
