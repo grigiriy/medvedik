@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HalfSideBlock from '../HalfSideBlock';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import './module.MainScreen.scss';
 
-class MainScreen extends Component {
+class MainScreen extends React.Component {
   render() {
     const { left, right } = this.props.content;
 
     let classList = this.props.mobile ? 'mainBlock mobileView ' : 'mainBlock ';
     classList += this.props.classNames ? this.props.classNames : '';
     return (
-      <ReactCSSTransitionGroup
-        transitionName="mainScreen"
-        transitionAppear={true}
-        transitionAppearimeout={0}
-        transitionLeave={false}
-        component="section"
+      <section
+        // transitionName="mainScreen"
+        // transitionAppear={true}
+        // transitionAppearimeout={0}
+        // transitionLeave={false}
         className={classList}
       >
         <HalfSideBlock
@@ -31,7 +30,7 @@ class MainScreen extends Component {
           side={right}
           mobile={this.props.mobile ? this.props.mobile : false}
         />
-      </ReactCSSTransitionGroup>
+      </section>
     );
   }
 }

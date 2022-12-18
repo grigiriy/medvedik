@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import './module.LightBox.scss';
 
 const cw = typeof window !== 'undefined' ? window.innerWidth : null;
 
-class LightBox extends Component {
+class LightBox extends React.Component {
   state = {
     isMobile: cw < 768 ? true : false,
     isTab: cw < 1024 && cw >= 768 ? true : false,
@@ -58,18 +58,18 @@ class LightBox extends Component {
     };
     if (this.props.lightBox === true) {
       return (
-        <ReactCSSTransitionGroup
-          transitionName="LightBox"
-          transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionLeaveTimeout={2000}
-          transitionEnter={false}
-          transitionLeave={true}
+        <div
+          // transitionName="LightBox"
+          // transitionAppear={true}
+          // transitionAppearTimeout={2000}
+          // transitionLeaveTimeout={2000}
+          // transitionEnter={false}
+          // transitionLeave={true}
           className={classList}
           onClick={(e) => this.clickDetect(e.target)}
         >
           <LB d_classList="attributes" LbContent={this.props.LbContent} />
-        </ReactCSSTransitionGroup>
+        </div>
       );
     } else {
       return '';

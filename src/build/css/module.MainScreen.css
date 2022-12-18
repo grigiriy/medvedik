@@ -1,0 +1,34 @@
+.mainBlock {
+  margin-bottom: 20px;
+  display: flex;
+}
+.mainBlock.mobileView, .mainBlock.booksPage {
+  flex-direction: column;
+}
+
+.mainScreen-appear,
+.mainScreen-onLeave {
+  opacity: 0.01;
+}
+.mainScreen-appear.halfScreenBlock:first-child,
+.mainScreen-onLeave.halfScreenBlock:first-child {
+  background-position-x: -150vw;
+}
+.mainScreen-appear.halfScreenBlock:last-child,
+.mainScreen-onLeave.halfScreenBlock:last-child {
+  background-position-x: 100vw;
+}
+
+.mainScreen-appear.mainScreen-appear-active {
+  transition: background-position 1s ease, opacity 2s ease-out;
+  opacity: 1;
+}
+.mainScreen-appear.mainScreen-appear-active.halfScreenBlock {
+  opacity: 1;
+}
+.mainScreen-appear.mainScreen-appear-active.halfScreenBlock:first-child {
+  background-position-x: 100%;
+}
+.mainScreen-appear.mainScreen-appear-active.halfScreenBlock:last-child {
+  background-position-x: 0;
+}

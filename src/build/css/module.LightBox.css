@@ -1,0 +1,75 @@
+.lightBoxBG {
+  background-color: #1e0c1acc;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  top: 0;
+}
+.lightBoxBG .lightBoxWrap {
+  display: flex;
+  margin: 100px auto auto;
+  z-index: 10;
+  position: relative;
+  justify-content: center;
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent {
+  position: relative;
+  max-width: 90vw;
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent img {
+  max-height: calc(100vh - 150px);
+  max-width: 90vw;
+}
+@media (max-width: 1024px) {
+  .lightBoxBG .lightBoxWrap .lightBoxContent {
+    margin: 20px;
+    max-width: none;
+  }
+  .lightBoxBG .lightBoxWrap .lightBoxContent img {
+    max-width: calc(100vw - 20px);
+  }
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent .attributes {
+  transition: all 0.5s;
+  padding: 10px 20px 30px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.726);
+  color: #fff;
+  opacity: 0;
+  left: auto;
+  bottom: 5px;
+  max-width: inherit;
+  min-width: calc(100% - 40px);
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent .attributes p {
+  font-size: 1.5em;
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent .attributes p + p {
+  font-size: 1.2em;
+}
+@media (max-width: 768px) {
+  .lightBoxBG .lightBoxWrap .lightBoxContent .attributes {
+    padding: 10px 10px 15px;
+  }
+  .lightBoxBG .lightBoxWrap .lightBoxContent .attributes p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  .lightBoxBG .lightBoxWrap .lightBoxContent .attributes p + p {
+    font-size: 1em;
+  }
+}
+.lightBoxBG .lightBoxWrap .lightBoxContent .attributes.withAtts {
+  opacity: 1;
+}
+
+.LightBox-appear,
+.LightBox-leave {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-out;
+}
+
+.LightBox-appear.LightBox-appear-active {
+  opacity: 1;
+}

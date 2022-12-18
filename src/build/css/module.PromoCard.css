@@ -1,0 +1,88 @@
+.col {
+  margin: 20px 0;
+  background-size: cover;
+}
+.col.center {
+  width: calc(50% - 30px);
+  background: #ffc7ed;
+  background: linear-gradient(90deg, #ffc7ed 0%, #a0fffd 100%);
+  margin: 20px auto;
+  width: 100%;
+}
+.col.center > * {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .col.center > * {
+    width: auto;
+  }
+}
+.col.center ul {
+  padding-left: 60px;
+  font-size: 36px;
+  color: #e0479f;
+}
+.col.center ul li a {
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.col.center ul li a:hover {
+  color: #f15db4;
+}
+.col.center ul li a:hover::selection {
+  color: #e0479f;
+}
+.col.center ul li a:hover::-moz-selection {
+  color: #e0479f;
+}
+.col.center ul li a::selection {
+  color: #550f2abb;
+}
+.col.center ul li a::-moz-selection {
+  color: #550f2abb;
+}
+@media (max-width: 1024px) {
+  .col.center ul {
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0;
+  }
+  .col.center ul li {
+    margin: 0 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7em;
+  }
+}
+.col.center div {
+  margin: 20px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .col.center div {
+    display: none;
+  }
+}
+.col.center + .side {
+  text-align: left;
+}
+.col.center + .side div {
+  margin-left: 0;
+}
+@media (max-width: 1024px) {
+  .col.center {
+    margin-top: 0;
+    order: 2;
+    width: 100%;
+  }
+}
+@media (max-width: 455px) {
+  .col.center {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { CSSTransitionGroup } from 'react-transition-group'
+
 import TextBlock from '../components/HalfSideBlock/TextBlock';
 import BookList from '../components/BookList';
 import Layout from '../components/Layout';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 import Content from '../assets/db/books.js';
 const cw =
   typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
-class Books extends Component {
+class Books extends React.Component {
   state = {
     mobile: false,
   };
@@ -23,19 +23,18 @@ class Books extends Component {
   render() {
     return (
       <Layout mobile={this.state.mobile}>
-        <ReactCSSTransitionGroup
-          transitionName="mainScreen"
-          transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionEnter={false}
-          transitionLeave={false}
-          component="section"
+        <section
+          // transitionName="mainScreen"
+          // transitionAppear={true}
+          // transitionAppearTimeout={2000}
+          // transitionEnter={false}
+          // transitionLeave={false}
         >
-          <div class="container">
+          <div className="container">
             <TextBlock side={Content.About} mobile={this.state.mobile} />
             <BookList content={Content.Books} />
           </div>
-        </ReactCSSTransitionGroup>
+        </section>
       </Layout>
     );
   }

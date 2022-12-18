@@ -1,0 +1,44 @@
+.card {
+  max-width: calc(33.33% - 20px);
+  padding: 10px;
+}
+.card:last-child {
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .card {
+    max-width: calc(50% - 20px);
+  }
+}
+@media (max-width: 455px) {
+  .card {
+    max-width: calc(50% - 5px);
+    padding: 0 0 20px;
+  }
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+.card a:hover .card_image img {
+  transform: rotate(2deg) scale(1.1);
+}
+.card a .card_attributes {
+  display: flex;
+  justify-content: space-between;
+}
+.card a .card_attributes p {
+  font-family: "Nunito", sans-serif;
+}
+@media (max-width: 455px) {
+  .card a .card_attributes p {
+    margin: 5px;
+  }
+}
+.card a .card_image {
+  overflow: hidden;
+}
+.card a .card_image img {
+  transition: all 0.5s;
+  max-width: 100%;
+}

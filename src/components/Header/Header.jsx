@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import './module.Header.scss';
 
 import Content from '../../assets/db/navMenu.js';
 import Contacts from '../../assets/db/about.js';
 
-class Header extends Component {
+class Header extends React.Component {
   state = {
     open: false,
   };
@@ -29,13 +29,13 @@ class Header extends Component {
   render() {
     let { credits } = Contacts;
     return (
-      <ReactCSSTransitionGroup
-        transitionName="header"
-        transitionAppear={true}
-        transitionAppearTimeout={0}
-        transitionEnter={false}
-        transitionLeave={false}
-        component="header"
+
+      <header
+        // transitionName="header"
+        // transitionAppear={true}
+        // transitionAppearTimeout={0}
+        // transitionEnter={false}
+        // transitionLeave={false}
         className={this.state.open ? 'active' : ''}
       >
         <ul className="topMenu">
@@ -94,7 +94,7 @@ class Header extends Component {
               'MariaMedvedik.png')})`,
           }}
         ></div>
-      </ReactCSSTransitionGroup>
+      </header>
     );
   }
 }

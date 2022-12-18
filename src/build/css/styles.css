@@ -1,0 +1,186 @@
+@import url("../fonts/fontello/css/fontello.css");
+@import url("https://fonts.googleapis.com/css?family=Alice&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Oswald:700&display=swap");
+* {
+  font-family: "Oswald";
+  font-size: 1em;
+}
+
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+p {
+  font: 1.5em/1.5em "Alice";
+}
+p[class^=h] {
+  font-family: "Oswald";
+}
+p.h1 {
+  font-family: "Lobster";
+  font-size: 2.5em;
+  display: block;
+}
+@media (max-width: 455px) {
+  p.h1 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 455px) {
+  p.h3 {
+    font-size: 1.3em;
+  }
+}
+p.tc {
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 18px;
+  margin: 0;
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.row {
+  display: block;
+  width: 100%;
+}
+
+::selection {
+  background: #fd5595bb;
+  /* Safari */
+}
+
+::-moz-selection {
+  background: #fd5595bb;
+  /* Firefox */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+}
+.container.fluid {
+  max-width: none;
+}
+.container.clearfix {
+  padding: 0;
+}
+@media (max-width: 455px) {
+  .container {
+    padding: 0 10px;
+    width: calc(100% - 20px);
+  }
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.react-resizable {
+  position: relative;
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #922162;
+}
+
+.react-resizable-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+  transform: rotate(90deg);
+}
+
+.react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-resizable-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+  transform: rotate(180deg);
+}
+
+.react-resizable-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+  transform: rotate(270deg);
+}
+
+.react-resizable-handle-w,
+.react-resizable-handle-e {
+  top: 50%;
+  margin-top: -10px;
+  cursor: ew-resize;
+}
+
+.react-resizable-handle-w {
+  left: 0;
+  transform: rotate(135deg);
+}
+
+.react-resizable-handle-e {
+  right: 0;
+  transform: rotate(315deg);
+}
+
+.react-resizable-handle-n,
+.react-resizable-handle-s {
+  left: 50%;
+  margin-left: -10px;
+  cursor: ns-resize;
+}
+
+.react-resizable-handle-n {
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.react-resizable-handle-s {
+  bottom: 0;
+  transform: rotate(45deg);
+}

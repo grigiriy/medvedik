@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/Footer';
@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 
 import '../../assets/scss/styles.scss';
 
-class Layout extends Component {
+class Layout extends React.Component {
   render() {
     let { children } = this.props;
     return (

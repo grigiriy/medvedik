@@ -1,0 +1,38 @@
+.book_card {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .book_card {
+    flex-direction: column;
+  }
+}
+.book_card .h3 {
+  font-family: "Lobster", cursive;
+}
+.book_card .card_image {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 1024px) {
+  .book_card .card_image {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .book_card .card_image {
+    margin: 0 auto;
+  }
+  .book_card .card_image img {
+    max-width: 60vw;
+  }
+}
+.book_card .card_details p:not(.h3) {
+  padding-bottom: 10px;
+}
+@media (max-width: 1024px) {
+  .book_card .card_details p:not(.h3) {
+    font-size: 1em;
+  }
+}
